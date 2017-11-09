@@ -1,0 +1,22 @@
+<view class="page_all">
+  <view class="page">
+    <view current="{{current}}">
+      <view id='{{index}}' data-dex='0' wx-if='{{dex==index}}' wx:for='{{pro}}' wx:for-item='items' wx:key='index'>
+        <view class='examination'>{{items.chinese[0].chinese}}
+          <view>{{items.chinese[0].english}}</view>
+        </view>
+        <view class='option-box' wx:for='{{items.choices}}' wx:key='index'>
+          <view class='option {{_num==index?"active":""}} {{_num2==index?"active2":""}}' id='{{index}}' bindtap='bindConfirmTap'>{{words[item].word}}</view>
+        </view>
+        <view  class='option-box'>
+          <view  class='option {{_num==4?"active":""}} {{_num2==4?"active2":""}}' bindtap='bindDefinitionTap'>不记得了</view>
+        </view>
+      </view>
+
+    </view>
+    <view class="page__ft" wx:if="{{isShow}}">
+      <button class="btn pbtn" type="primary" bindtap="bindparaphraseTap">查看释义</button>
+      <button class="btn" type="default" bindtap="bindNextTap">下一个</button>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,22 @@
+<view class="page_all">
+  <view class="page">
+    <view id='{{index}}' data-dex='0' wx-if='{{dex==index}}' wx:for='{{pro}}' wx:for-item='items' wx:key='index'>
+      <view class='examination'>
+        {{items.title}}
+      </view>
+      <view class='option-box' wx:for='{{items.choices}}' wx:key='index'>
+        <view class='option {{_num==index?"active":""}} {{_num2==index?"active2":""}}' id='{{index}}' bindtap='bindConfirmTap'>{{item}}</view>
+      </view>
+    </view>
+    <view class="page__ft" wx:if="{{isShow}}">
+      <button class="btn pbtn" type="primary" bindtap="bindNextTap">下一题</button>
+    </view>
+    <view wx:if="{{showResult}}" class="result">
+      <view>您的得分为<text>{{count-wrongNumber}}</text>分</view>
+      <view wx:if="{{wrongNumber>8}}">您处在备考最初阶段，单词是重点。从小3000开始刷起，先看单词的中文释义，小3000刷3遍，每个单词先保证眼熟。</view>
+      <view wx:if="{{(wrongNumber<9)&&(wrongNumber>2)}}">您单词基础一般，至少完成大3000五轮的背诵，重点关注单词的英文释义。</view>
+      <view wx:if="{{wrongNumber<3}}">您单词基础扎实，下一步复习中，重点关注单词的考法和常考同反义词，利用填空题目深入掌握考法含义。</view>
+      <button class="rbtn pbtn" type="primary" bindtap="bindRecommendTap">查看适合您的训练</button>
+    </view>
+  </view>
+</view>

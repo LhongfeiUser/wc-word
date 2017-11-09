@@ -1,0 +1,62 @@
+.page{
+  height: 100%;
+  width:100%;
+  background:#fff;
+}
+.page {
+  height:100%;
+  background: #fff;
+  padding-bottom:80rpx;
+}
+.page__ft {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  background-color: #fff; 
+}
+.btn{
+  width:750rpx;
+  height: 80rpx;
+  font-size:28rpx;
+  line-height: 80rpx;
+  border-radius: 0;
+}
+.btn::after{
+  border-radius: 0;
+}
+.sliding{
+  background:#fff;
+  padding:0 60rpx;
+  font-size:28rpx;
+}
+.word {
+  padding: 40rpx 0 20rpx;
+  font-size: 40rpx;
+  font-weight: bold;
+}
+.soundmark{
+  display: flex;
+  align-items: center;
+  padding-bottom: 30rpx;
+}
+.soundmark image{
+  margin-left:10rpx;
+  width:47rpx;
+  height:39rpx;
+}
+.words_content{
+  position:relative;
+  display: flex;
+}
+.test_method{
+  padding: 20rpx 0;
+}
+.words_content_t{
+  position:absolute;
+  top:10rpx;
+  left:0;
+}
+.words_content_p{
+  margin:10rpx 0 10rpx 48rpx;
+}

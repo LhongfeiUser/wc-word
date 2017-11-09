@@ -1,0 +1,28 @@
+<!--pages/user/myAnswer.wxml-->
+ <view class='answer'>
+    <view class='answerTitle'>{{discussAnswerList.length}}个回答</view>
+    <!--UserInfo  -->
+    <view class='quiz' wx:for='{{discussAnswerList}}' wx:key='index' id='{{item.questionId}}' bindtap='bindAskDetailsTap'>
+      <view class='quizUser'>
+       <view class='headPortrait'>
+        <image src='https://weichen.bjtcsj.com/file/{{headImgUrl}}'></image>
+      </view>
+        <view class='nicknameBox'>
+          <view class='nickname'>{{nickName}}</view>
+          <view class='quizTime'>{{item.createdTime}}</view>
+        </view>
+      </view>
+      <!--Describe  -->
+      <text class='describe'>{{item.answer}}</text>
+      <view class='praise'>
+        <view class='endorse praiseItem' style='color:{{answerLikeColor}};'>
+          <view class='iconfont icon-agree'></view>
+          <view data-answernum='1' data-dex='{{index}}' id='{{item.id}}' bindtap='bindAnswerLikeNumTab'>赞同{{item.likeNum}}</view>
+        </view>
+        <view class='oppose praiseItem' style='color:{{answerDisLikeColor}};'>
+          <view class='iconfont icon-disagree'></view>
+          <view data-answernum='2' data-dex='{{index}}' id='{{item.id}}' bindtap='bindAnswerLikeNumTab'>反对{{item.dislikeNum}}</view>
+        </view>
+      </view>
+    </view>
+  </view>

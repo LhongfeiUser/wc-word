@@ -1,0 +1,53 @@
+.page {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+}
+.ask {
+  font-size: 26rpx;
+  background: #fff;
+}
+
+.search {
+  position: relative;
+  width: 100%;
+  display: flex;
+}
+.searchBox {
+  width: 616rpx;
+  height: 60rpx;
+  background: #f8f8f8;
+  margin: 0 30rpx 0 20rpx;
+  border-radius: 10rpx;
+  color:#888888;
+  display: flex;
+}
+.searchBox .iconfont{
+  font-size: 26rpx;
+  line-height: 60rpx;
+  margin: 0 20rpx;
+}
+.searchBox input {
+  width: 560rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  color: #888;
+}
+
+.character {
+  font-size: 26rpx;
+  color: #00cc97;
+  line-height: 60rpx;
+}
+.loading {
+  padding: 10rpx;
+  text-align: center;
+  font-size: 26rpx;
+}
+.word_line{
+  height: 87rpx;
+  font-size: 26rpx;
+  line-height: 87rpx;
+  margin: 0 30rpx;
+  border-bottom: 2rpx solid #f8f8f8;
+}

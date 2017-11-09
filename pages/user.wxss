@@ -1,0 +1,216 @@
+.page {
+  width: 100%;
+
+  font-size: 32px;
+}
+
+.self {
+  width: 100%;
+}
+
+.userInfoBox {
+  position: relative;
+  width: 100%;
+  margin-bottom: 20rpx;
+}
+
+.userInfo-bg {
+  width: 100%;
+  height: 60rpx;
+  background: #272728;
+}
+
+.userInfo {
+  display: flex;
+  padding: 0 0 20rpx 30rpx;
+  background: #fff;
+}
+
+.headPortraitBox {
+  position: absolute;
+  top: 0;
+}
+
+.headPortrait {
+   /* width: 120rpx;
+  height: 120rpx;
+  border: 4rpx solid #fff;
+  border-radius: 50%;
+  overflow: hidden;  */
+}
+
+.headPortrait image {
+ width: 120rpx;
+  height: 120rpx;
+  border: 4rpx solid #fff;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.userNickeName {
+  font-size: 32rpx;
+  color: #222;
+}
+
+.myDatum {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 140rpx;
+}
+
+.myDatum_item {
+  display: flex;
+  align-items: baseline;
+}
+
+.dynamic {
+  margin-right: 30rpx;
+}
+
+.myDatum_item text {
+  font-size: 40rpx;
+  color: #333;
+}
+
+.myDatum_item view {
+  font-size: 26rpx;
+  color: #8b8e93;
+  margin-left: 10rpx;
+}
+
+.schedule {
+  background: #fff;
+  padding: 24rpx 30rpx 24rpx;
+  margin-bottom: 20rpx;
+}
+
+.scheduleTop {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20rpx;
+}
+
+.learning {
+  display: flex;
+  font-size: 22rpx;
+  color: #888;
+}
+
+.learningSchedule {
+  font-size: 32rpx;
+  color: #00cc91;
+  margin-right: 20rpx;
+}
+
+.percentage {
+  color: #fff;
+  background: #00cc91;
+  border-radius: 18px;
+  font-size: 24rpx;
+  padding: 1rpx 18rpx;
+  line-height: 36rpx;
+  height: 36rpx;
+}
+
+progress {
+  border-radius: 18px;
+}
+
+.vocabulary {
+  font-size: 26rpx;
+  color: #cecece;
+}
+
+.content {
+  background: #fff;
+  padding: 10rpx 0 0;
+  margin-bottom: 20rpx;
+}
+
+.content-items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24rpx 30rpx;
+  border-bottom: 1rpx solid #e5e5e5;
+  font-size: 26rpx;
+  color: #353535;
+}
+
+.icon-items {
+  width: 52rpx;
+  height: 52rpx;
+  text-align: center;
+  line-height: 52rpx;
+}
+
+.iconRight view{
+  color: #C7C7CC;
+ font-size:22rpx;
+}
+.myTitle {
+  font-size: 34rpx;
+  color: #000;
+  margin-left: 30rpx;
+  width:585rpx;
+  line-height: 52rpx;
+  height: 52rpx;
+}
+
+.diary {
+  padding: 20rpx 0 50rpx;
+  background: #fff;
+}
+
+.diaryHead {
+  display: flex;
+  justify-content: space-between;
+  padding: 24rpx 30rpx;
+  border-bottom: 1rpx solid #e5e5e5;
+  font-size: 26rpx;
+  color: #999;
+}
+
+.report {
+  font-size: 24rpx;
+  color: #00cc91;
+}
+
+.diaryDate {
+  padding: 20rpx 50rpx;
+}
+
+.year {
+  font-size: 34rpx;
+  margin-bottom: 30rpx;
+}
+
+.dateTitle {
+  font-size: 26rpx;
+  color: #222;
+  margin-bottom: 30rpx;
+}
+
+.date_items {
+  display: flex;
+  margin-bottom: 30rpx;
+  font-size: 24rpx;
+  color: #cecece;
+}
+
+.date_items view {
+  margin-right: 20rpx;
+}
+
+.productTitle {
+  padding: 3rpx 24rpx;
+  margin: 0 20rpx;
+  background: #f4f4f4;
+  border-radius: 18rpx;
+}
+.loading {
+  padding: 10rpx;
+  text-align: center;
+  font-size: 26rpx;
+}

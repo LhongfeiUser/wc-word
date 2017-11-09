@@ -1,0 +1,20 @@
+<!--pages/user/myDrill.wxml-->
+<view class='page'>
+  <view class='bottom'>
+    <view class='my_drill'>
+      <view>我的训练</view>
+      <!-- <view class='iconfont icon-add drill_add' bindtap='bindAddTap'></view> -->
+    </view>
+    <view class='drill_way' wx:for='{{productList}}' wx:key='index' bindtap='bindDrillTap' data-product='{{item}}'>
+      <view class='title'>
+        <view>{{item.name}}</view>
+        <text>{{item.joinNumber}}人已参加</text>
+      </view>
+      <view class='drill_img'>
+        <canvas class="circle" style="z-index:5;width:100%; height:100%;" canvas-id="canvasArcCir{{index}}"></canvas>
+        <canvas class="circle" style="z-index:2;width:100%; height:100%;" canvas-id="canvasCircle{{index}}"></canvas>
+        <view class="draw_btn">{{n[index]}}%</view>
+      </view>
+    </view>
+  </view>
+</view>

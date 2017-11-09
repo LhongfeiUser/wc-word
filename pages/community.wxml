@@ -1,0 +1,114 @@
+<view class='page'>
+  <!--Tab  -->
+  <view class='tabLine'>
+    <view class='tab {{tabChange==0?"cur":""}}' id='0' bindtap='bindTabTap'>
+      发现
+    </view>
+    <view class='tab {{tabChange==1?"cur":""}}' id='1' bindtap='bindTabTap'>
+      问答
+    </view>
+  </view>
+  <!--发现  -->
+  <view hidden='{{tabChange!="0"}}'>
+    <view class='discover'>
+      <view class='globalRanking'>
+        <view class='head-bg'>
+          <image wx:if='{{user.backImgUrl!=null}}' src='https://weichen.bjtcsj.com/file/{{user.backImgUrl}}'></image>
+        </view>
+        <view class='mid-bg'></view>
+        <view class='userinfo'>
+          <view class='userBox'>
+            <view class='headPortrait'>
+              <image wx:if='{{user.headImgUrl!=null}}' src='https://weichen.bjtcsj.com/file/{{user.headImgUrl}}'></image>
+            </view>
+            <view class='pileum'><image src='images/crown.svg'></image></view>
+          </view>
+          <view class='timeInfo'>
+            <view class='nickNameBox'>
+              <view class='nickName'>{{user.nickname}}占领了封面</view>
+            </view>
+            <view class='drillTimeBox'>
+              <view class='drillTime allTime'>
+                <view>训练总时长</view>
+                <view>{{totalTime}}h</view>
+              </view>
+              <view class='drillTime todayTime'>
+                <view>今日训练</view>
+                <view>{{todayTime}}min</view>
+              </view>
+            </view>
+          </view>
+          <view class='iconRight' bindtap='bindAllRankingsTap'>
+           <view class='rank_all' >查看全部</view>
+          <view class='icon-rightPic iconfont icon-right'></view>
+          </view> 
+        </view>
+      </view>
+      <view class='peopleNearby'>
+        <view class='nearbyTitle'>
+          <view>附近的人</view>
+        </view>
+        <view class='detailedInformation_box'>
+          <view class='detailedInformation' wx:for='{{userList}}' wx:key='index'>
+            <view class='detailedInformation_bg'>
+              <image wx:if='{{item.backImgUrl!=null}}' src='https://weichen.bjtcsj.com/file/{{item.backImgUrl}}'></image>
+            </view>
+            <view class='userNickName'>{{item.nickname}}</view>
+            <view class='peopleNearbyUser'>
+              <textarea placeholder='{{item.sign}}'></textarea>
+              <view class='nearbyInfo'>
+                <view>{{item.distance}}km</view>
+                <view class='todayDrill'>
+                  <view class='iconfont icon-time'></view>
+                  <view>{{item.todayTime}}min</view>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!--问答  -->
+  <view hidden='{{tabChange!="1"}}'>
+    <view class='ask'>
+      <view class='search'>
+       <view class='iconfont icon-search'></view>
+        <view class='searchBox'>
+          <input bindinput='searchQuiz'></input>
+        </view>
+        <view class='character' bindtap='bindSearchAskTap'>搜索</view>
+      </view>
+      <view class='askHead'>
+        <view class='askHead_new'>最新问答</view>
+        <button class='askHead_anwser' bindtap='bindQuizTap'>提问</button>
+      </view>
+      <view class='askContent' wx:for='{{questionList}}' wx:key='index'  bindtap='bindAskDetailsTap' id='{{item.id}}'>
+        <view class='issue'>{{item.title}}</view>
+        <view class='label label_item'>
+          <view class='problemSpecific label_item' wx:for='{{item.labelList}}' wx:for-item='items' wx:key='index'>
+            <view wx:if='{{items!=""}}'>{{items}}</view>
+          </view>
+          <view class='userQuestionTime label_item'>
+            <view>{{item.nickname}}</view>
+            <view class='quiz'>{{item.createdTime}}</view>
+          </view>
+        </view>
+        <view class='contentDetails'>
+            <view  class='quizPic' wx:if='{{item.imgUrl!=null}}'>
+              <image wx:if='{{item.imgUrl!=null}}' src='https://weichen.bjtcsj.com/file/{{item.imgUrl}}'></image>
+            </view> 
+            <view class='contentCharacter'>
+              {{item.content}}
+            </view>  
+        </view>
+        <view class='respond'>
+          <view>{{item.likeNum}}人赞同</view>
+          <view>{{item.answerNum}}个回答</view>
+        </view>
+      </view>
+    </view>
+    <view class="loading" hidden="{{!quizLoading}}">正在载入更多...</view>
+    <view class="loading complete" hidden="{{!quizLoadingComplete}}">已加载全部</view>
+  </view>
+</view>

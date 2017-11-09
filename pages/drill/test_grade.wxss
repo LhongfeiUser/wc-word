@@ -1,0 +1,79 @@
+.page {
+  text-align: center;
+  background: #fff;
+  padding:60rpx 0 140rpx 0;
+}
+.page_all {
+  height: 100%;
+  background: #fff;
+}
+.page__ft {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  background-color: #fff; 
+}
+.page__ft .pbtn{
+  background-color:#00cc97;
+}
+
+.page__ft .pbtn[disabled]{
+  background-color:#06ebb1;
+}
+
+.btn{
+  width:750rpx;
+  height: 80rpx;
+  font-size:28rpx;
+  line-height: 80rpx;
+  border-radius: 0;
+}
+.btn::after{
+  border-radius: 0;
+}
+.option-box {
+  margin-top: 60rpx;
+  font-size: 28rpx;
+}
+.option {
+  width: 630rpx;
+  height: 70rpx;
+  color: #000;
+  margin: auto;
+  line-height: 70rpx;
+  border: 2rpx solid #000;
+}
+.active {
+  border: 2rpx solid #09bb07;
+}
+.active2 {
+  border: 2rpx solid #e64340;
+}
+
+.examination {
+  font-size: 28rpx;
+  width:570rpx;
+  margin:0 auto 60rpx auto;
+}
+.result{
+  margin:0 60rpx;
+  width:630rpx;
+  font-size:26rpx;
+}
+.result view{
+  margin-bottom: 50rpx;
+}
+.result text{
+  font-size:56rpx;
+}
+.rbtn{
+  width:630rpx;
+  height: 80rpx;
+  font-size:26rpx;
+  line-height: 80rpx;
+  border-radius: 0;
+}
+.rbtn::after{
+  border-radius: 0;
+}

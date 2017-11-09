@@ -1,0 +1,75 @@
+<!--pages/community/askDetails.wxml-->
+<view class='page'>
+  <!--提问  -->
+  <view class='quiz'>
+    <!--UserInfo  -->
+    <view class='quizUser'>
+      <view class='headPortrait'>
+        <image wx:if='{{discussQuestion.headImgUrl!=null}}' src='https://weichen.bjtcsj.com/file/{{discussQuestion.headImgUrl}}'></image>
+      </view>
+      <view class='nicknameBox'>
+        <view class='nickname'>{{discussQuestion.nickname}}</view>
+        <view class='quizTime'>{{discussQuestion.createdTime}}</view>
+      </view>
+      <view class='babel'>
+        <view wx:for='{{discussQuestion.labelList}}' wx:key='index'>
+          <text>{{item}}</text>
+        </view>
+      </view>
+    </view>
+    <view class='qusetion'>{{discussQuestion.title}}</view>
+    <!--Describe  -->
+    <view class='quizPicBox'>
+      <view class='quizPic' wx:if='{{discussQuestion.imgUrl!=null}}'>
+        <image wx:if='{{discussQuestion.imgUrl!=null}}' src='https://weichen.bjtcsj.com/file/{{discussQuestion.imgUrl}}'></image>
+      </view>
+      <text class='describe'>
+      {{discussQuestion.content}}
+    </text>
+    </view>
+
+    <view class='praise'>
+      <view class='endorse praiseItem'  style='color:{{likeColorList[discussQuestion.isLike]}};'>
+        <view class='iconfont icon-agree'></view>
+        <view data-num='1' bindtap='bindLikeNumTab' id='{{discussQuestion.id}}'>赞同{{discussQuestion.likeNum}}</view>
+      </view>
+      <view class='oppose praiseItem' style='color:{{disLikeColorList[discussQuestion.isLike]}};'>
+        <view class='iconfont icon-disagree'></view>
+        <view data-num='2' bindtap='bindLikeNumTab' id='{{discussQuestion.id}}'>反对{{discussQuestion.dislikeNum}}</view>
+      </view>
+      <view class='writeAnswer praiseItem' bindtap='bindAnswerTap'>
+        <view class='iconfont icon-critic'></view>
+        <view>写回答</view>
+      </view>
+    </view>
+  </view>
+
+  <!--回答  -->
+  <view class='answer'>
+    <view class='answerTitle'>{{discussAnswerList.length}}个回答</view>
+    <!--UserInfo  -->
+    <view class='quiz' wx:for='{{discussAnswerList}}' wx:key='index'>
+      <view class='quizUser'>
+        <view class='headPortrait'>
+          <image wx:if='{{item.headImgUrl!=null}}' src='https://weichen.bjtcsj.com/file/{{item.headImgUrl}}'></image>
+        </view>
+        <view class='nicknameBox'>
+          <view class='nickname'>{{item.nickname}}</view>
+          <view class='quizTime'>{{item.createdTime}}</view>
+        </view>
+      </view>
+      <!--Describe  -->
+      <text class='describe'>{{item.answer}}</text>
+      <view class='praise'>
+        <view class='endorse praiseItem' style='color:{{likeColorList[item.isLike]}};'>
+          <view class='iconfont icon-agree'></view>
+          <view data-answernum='1' data-dex='{{index}}' id='{{item.id}}' bindtap='bindAnswerLikeNumTab'>赞同{{item.likeNum}}</view>
+        </view>
+        <view class='oppose praiseItem' style='color:{{disLikeColorList[item.isLike]}};'>
+          <view class='iconfont icon-disagree'></view>
+          <view data-answernum='2' data-dex='{{index}}' id='{{item.id}}' bindtap='bindAnswerLikeNumTab'>反对{{item.dislikeNum}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

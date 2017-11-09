@@ -1,0 +1,76 @@
+.page{
+  background: #fff;
+  padding-bottom: 80rpx;
+}
+.page_all {
+  height: 100%;
+  background: #fff;
+}
+.page__ft {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  background-color: #fff; 
+}
+.btn{
+  width:375rpx;
+  height: 80rpx;
+  font-size:28rpx;
+  line-height: 80rpx;
+  border-radius: 0;
+}
+.btn::after{
+  border-radius: 0;
+}
+.page__ft .pbtn{
+  background-color:#00cc97;
+}
+
+.page__ft .pbtn[disabled]{
+  background-color:#06ebb1;
+}
+ .head_word{
+  font-size: 34rpx;
+  font-weight: bold;
+  margin-bottom: 20rpx;
+}
+.head_soundmark{
+  font-size:26rpx;
+  display: flex;
+  align-items: center;
+}
+.words_content{
+  margin-top: 20rpx;
+  font-size:26rpx;
+  color:#353535;
+}
+.head_soundmark image{
+  margin-left:10rpx;
+  width:47rpx;
+  height:39rpx;
+}
+.head_box{
+  padding: 40rpx;
+  border-top:10rpx solid #e8e8e8;
+}
+.master_box{
+  display: flex;
+  justify-content: space-between;
+  padding:70rpx 200rpx;
+  font-size: 28rpx
+}
+.master{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.master_box text{
+  font-size: 60rpx;
+  font-weight: bold;
+}
+.not_master{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

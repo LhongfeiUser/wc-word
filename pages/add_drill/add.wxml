@@ -1,0 +1,50 @@
+<view class='page'>
+  <view class='tabLine'>
+    <view class='tab {{tabChange==0?"cur":""}}' id='0' bindtap='bindTabTap'>
+    基础
+    </view>
+    <view class='tab {{tabChange==1?"cur":""}}' id='1' bindtap='bindTabTap'>
+    进阶
+    </view>
+  </view>
+  <view hidden='{{tabChange!="0"}}'>
+    <view class='content-box' wx:for='{{productList}}' wx:for-item='items' wx:key='index' bindtap='bindDrillTap' data-product='{{items}}'>
+      <view class='Pic-box'>
+        <image class="bg-img" src='https://weichen.bjtcsj.com/file/{{items.imgUrl}}'></image>
+        <image class="right-img" src='../images/right.png'></image>
+        <view class='Pic-content'>
+          <view class='title'>{{items.name}}</view>
+          <view class='explain'>{{items.description}}</view>
+        </view>
+      </view>
+      <view class='difficulty'>
+        <view class='grade'>
+          <view>难度</view>
+          <view wx:for='{{grade}}' class="iconfont icon-difficulty_fills" wx:if='{{items.grade>index}}'></view>
+          <view wx:for='{{grade}}' class="iconfont icon-difficulty_lines" wx:if='{{items.grade<index+1}}'></view>
+        </view>
+        <view class='joinNumber'>{{items.joinNumber}}人已参加</view>
+      </view>     
+    </view>
+  </view>
+  <view hidden='{{tabChange!="1"}}'>
+    <view class='content-box' wx:for='{{_productList}}' wx:for-item='items' wx:key='index' bindtap='bindDrillTap' data-product='{{items}}'>
+      <view class='Pic-box'>
+        <image class="bg-img" src='https://weichen.bjtcsj.com/file/{{items.imgUrl}}'></image>
+        <image class="right-img" src='../images/right.png'></image>
+        <view class='Pic-content'>
+          <view class='title'>{{items.name}}</view>
+          <view class='explain'>{{items.description}}</view>
+        </view>
+      </view>
+      <view class='difficulty'>
+        <view class='grade'>
+          <view>难度</view>
+          <view wx:for='{{grade}}' class="iconfont icon-difficulty_fills" wx:if='{{items.grade>index}}'></view>
+          <view wx:for='{{grade}}' class="iconfont icon-difficulty_lines" wx:if='{{items.grade<index+1}}'></view>
+        </view>
+        <view class='joinNumber'>{{items.joinNumber}}人已参加</view>
+      </view>
+    </view>
+  </view>
+</view>

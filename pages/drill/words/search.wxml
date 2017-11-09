@@ -1,0 +1,16 @@
+<view class='page'>
+  <view class='ask'>
+    <view class='search'>
+      <view class='searchBox'>
+        <view class='iconfont icon-search'></view>
+        <input bindinput='bindInput'></input>
+      </view>
+      <view class='character' bindtap='bindSearchTap'>搜索</view>
+    </view>
+    <view wx:for="{{wordList}}" data-word="{{item}}" class="word_line" bindtap='bindWordTap'>
+      {{item.word}}
+    </view>
+  </view>
+  <view class="loading" hidden="{{!loading}}">正在载入更多...</view>
+  <view class="loading complete" hidden="{{!loadingComplete}}">已加载全部</view>
+</view>

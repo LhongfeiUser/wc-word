@@ -1,0 +1,53 @@
+<view class='page_all'>
+  <view class='page'>
+    <view class='top'>
+      <view class='particulars_box'>
+        <image wx:if="{{product!=null}}" src='https://weichen.bjtcsj.com/file/{{product.imgUrl}}'></image>
+        <view class='particulars_title'>
+          <view>{{product.name}}</view>
+          <text>{{product.joinNumber}}人已参加</text>
+        </view>
+      </view>
+      <view class='particulars_content'>
+        <view class='drill content'>
+          <view>训练</view>
+          <view class='content_detail'>
+            <text>{{product.subNumber}}</text>
+            <view>单元</view>
+          </view>
+        </view>
+        <view class='average content'>
+          <view>平均</view>
+          <view class='content_detail'>
+            <text>{{product.averageTime}}</text>
+            <view>分钟</view>
+          </view>
+        </view>
+        <view class='difficulty content'>
+          <view>难度</view>
+          <view class='content_detail'><text>{{grade[product.grade]}}</text></view>
+        </view>
+      </view>
+    </view>
+    <view class='explain'>
+      <view class="explain_title">训练说明</view>
+      <view class="explain_main">{{product.description}}</view>
+    </view>
+    <view class='bottom'>
+      <view class='bottom-title'>功能列表</view>
+      <view class='bottom_main'>
+        <view class="bottom_line_item">
+          <view>顺序背词</view>
+          <view class="iconfont icon-right "></view>
+        </view>
+        <view class="bottom_line_item">
+          <view>乱序背词</view>
+          <view class="iconfont icon-right "></view>
+        </view>
+      </view>
+    </view>
+    <view class="page__ft">
+      <button type="primary" class='btn pbtn' bindtap='bindJoinTap'>参加训练</button>
+    </view>
+  </view>
+</view>

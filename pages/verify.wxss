@@ -1,0 +1,82 @@
+.commodity_screen {
+ width: 100%;
+ height: 100%;
+ position: fixed;
+ top: 0;
+ left: 0;
+ opacity: 0.2;
+ overflow: hidden;
+ z-index: 1000;
+ color: #fff;
+} 
+.commodity_attr_box{
+  width:600rpx;
+  height:800rpx;
+  position: absolute;
+  overflow: auto;
+  left: 0;
+  right:0;
+  bottom:0;
+  top: -240rpx;
+  margin:auto;
+  z-index: 2000;
+}
+.main{
+  margin:50rpx 0rpx;
+}
+.title{
+  text-align: center;
+  line-height: 80rpx;
+}
+.title view{
+  font-size: 40rpx;
+  font-weight: normal;
+  color: #000000;
+}
+.title text{
+  font-size: 28rpx;
+  font-weight: normal;
+  color: #888888;
+}
+
+.line-item{
+  font-size: 28rpx;
+  margin-top:60rpx;
+  display: flex;
+}
+input{
+  width:586rpx;
+  height:78rpx;
+  border: 2rpx solid #888888;
+  background: #ffffff;
+  color:#000000;
+  line-height: 78rpx;
+  padding-left:10rpx;
+}
+.input-placeholder{
+  color:#b2b2b2;
+}
+input.code_number{
+  width:374rpx;
+}
+.menu{
+  position: relative;
+}
+.send{
+  height:82rpx;
+  width:200rpx;
+  margin-left:12rpx;
+  font-size: 28rpx;
+  line-height: 78rpx;
+}
+.main .btn{
+  font-size: 28rpx;
+  line-height: 78rpx;
+  height:82rpx;
+  width:600rpx;
+  background-color:#00cc97;
+}
+
+.main .btn[disabled]{
+  background-color:#06ebb1;
+}

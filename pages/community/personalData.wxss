@@ -1,0 +1,104 @@
+/* pages/community/personalData.wxss */
+
+.page {
+  width: 100%;
+  padding-bottom: 80rpx;
+  font-size: 34rpx;
+  color: #000;
+  letter-spacing: 0;
+}
+
+
+.headPortraitBox {
+  border-top: 2rpx solid #b2b2b2;
+  padding: 20rpx 30rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+}
+
+.top{
+  background: #fff; 
+  margin-top:20rpx;
+}
+.headPortrait {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-left: 350rpx;
+}
+
+.headPortrait image {
+  width: 100%;
+  height: 100%;
+}
+
+.userInfoBox {
+  border-top: 1rpx solid #E5E5E5;
+  padding: 20rpx 30rpx;
+}
+
+.userInfoTitle {
+  display: flex;
+  justify-content: space-between;
+}
+
+.userInfo {
+  color: #888;
+}
+.dynamic {
+  display: flex;
+   border-bottom:1rpx solid #E5E5E5;
+   padding:0 0 20rpx;
+   justify-content: space-between;
+}
+
+textarea{
+  width: 477rpx;
+  height: 48rpx;
+  margin-left: 70rpx;
+}
+
+.backgroundPicBox {
+  padding: 30rpx;
+ background: #fff;
+ margin-top:20rpx;
+  
+}
+
+.backgroundPicTitel {
+  margin:20rpx 0;
+}
+
+.backgroundPic {
+  width: 690rpx;
+  height: 524rpx;
+}
+
+.backgroundPic image {
+  width: 100%;
+  height: 100%;
+}
+
+.btn {
+  width: 100%;
+  display: flex;
+  margin-top: 110rpx;
+}
+
+.btn button {
+  width: 330rpx;
+  height: 96rpx;
+  border-radius: 10rpx;
+}
+.save{
+  background: #00CC91;
+  color:#fff;
+}
+
+.userInfo input{
+  text-align: right;
+  width: 500rpx;
+}

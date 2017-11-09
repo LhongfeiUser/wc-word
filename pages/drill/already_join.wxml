@@ -1,0 +1,56 @@
+<view class='page_all'>
+  <view class='page'>
+    <view class='top'>
+      <view class='particulars_box'>
+        <image wx:if="{{product!=null}}" src='https://weichen.bjtcsj.com/file/{{product.imgUrl}}'></image>
+        <view class='particulars_title'>
+          <view>{{product.name}}</view>
+          <text>{{product.joinNumber}}人已参加</text>
+        </view>
+      </view>
+      <view class='explain'>
+        <view class="explain_title">训练说明</view>
+        <view class="explain_main">{{product.description}}</view>
+      </view>  
+        <view class='current_progress'>
+            <view class='title'>当前进度</view>
+            <view class='duration'>
+              <view class='bfb'>
+                <canvas class="circle" style="z-index:5;width:100%;; height:100%;" id='canvasArcCir1' canvas-id="canvasArcCir1"></canvas>
+                <canvas class="circle" style="z-index: 2; width:100%; height:100%;" canvas-id="canvasCircle1"></canvas>
+                <view class="draw_btn">
+                  <view>
+                    <view>{{n}}</view>
+                    <text>%</text>
+                  </view>
+                </view>
+              </view>
+              <view class='duration_detail'>
+                <view>已训练时长(h)</view>
+                <text>{{totalTime}}</text>
+              </view>
+              <view class='duration_detail'>
+                <view>今日训练时长(min)</view>
+                <text>{{todayTime}}</text>
+              </view>
+            </view>
+        </view>
+    </view>
+    <view class='bottom'>
+      <view class='bottom-title'>功能列表</view>
+      <view class='bottom_main'>
+        <view class="bottom_line_item" bindtap='bindReciteTap' data-type='1'>
+          <view>顺序背词</view>
+          <view class="iconfont icon-right "></view>
+        </view>
+        <view class="bottom_line_item" bindtap='bindReciteTap' data-type='2'>
+          <view>乱序背词</view>
+          <view class="iconfont icon-right "></view>
+        </view>
+      </view>
+    </view>
+    <view class="page__ft">
+      <button type="primary" class='btn pbtn' bindtap='bindReciteTap' data-type='{{lastType}}'>开始训练</button>
+    </view>
+  </view>
+</view>

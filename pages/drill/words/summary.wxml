@@ -1,0 +1,22 @@
+<view class="page_all">
+  <view class="page">
+    <view wx:for="{{array}}" wx:key='index' class="head_box">
+      <view>
+        <view class="head_word">{{item.word}}</view>
+        <view class="head_soundmark">
+        {{item.soundmark}}
+          <image bindtap="audioPlay" data-word="{{item.word}}" src='../../images/trumpet.png'></image>
+        </view>
+      </view>
+      <view class='words_content' wx:for="{{item.testMethodList}}" wx:key='index'>
+        {{index+1}}.{{item.type}}{{item.chinese}}:{{item.english}}
+      </view>
+    </view>
+    <view class="page__ft">
+      <button class="btn" type="default" bindtap="bindReciteTap">再背一次</button>
+      <button class="btn" type="default" bindtap="bindSkipTap">跳过练习</button>
+      <button class="btn pbtn" type="primary" bindtap="bindCementTap">巩固练习</button>
+    </view>
+    <audio  src="" id="myAudio" ></audio>
+  </view>
+</view>

@@ -1,0 +1,57 @@
+.page{
+  height: 100%;
+  width:100%;
+  background:#fff;
+}
+.sliding{
+  background:#fff;
+  font-size:28rpx;
+  height: 100%;
+}
+.scroll-sliding{
+  height: 100%;
+}
+.padding-sliding{
+  padding:0 60rpx;
+  width: 630rpx;
+}
+.word {
+  padding: 40rpx 0 20rpx;
+  font-size: 40rpx;
+  font-weight: bold;
+}
+.soundmark{
+  display: flex;
+  align-items: center;
+  padding-bottom: 30rpx;
+}
+.soundmark image{
+  margin-left:10rpx;
+  width:47rpx;
+  height:39rpx;
+}
+.words_content{
+  position:relative;
+  display: flex;
+}
+.test_method{
+  padding: 20rpx 0;
+}
+.words_content_t{
+  position:absolute;
+  top:10rpx;
+  left:0;
+}
+.words_content_p{
+  margin:10rpx 0 10rpx 48rpx;
+}
+.title_sty{
+  display:flex;
+  align-items:center;
+}
+.title_icon{
+  width:5rpx;
+  height:30rpx;
+  background:#00cc8f;
+  margin-right:10rpx;
+}

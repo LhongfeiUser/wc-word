@@ -1,0 +1,68 @@
+{
+  "pages": [
+    "pages/loading",
+    
+    "pages/verify",
+
+    "pages/drill",
+    "pages/community",
+    "pages/user",
+    
+    "pages/about_me",
+
+    "pages/add_drill/recommend",
+    "pages/add_drill/add",
+
+    "pages/drill/join",
+    "pages/drill/already_join",
+    "pages/drill/test_grade",
+    "pages/drill/words/list",
+    "pages/drill/words/summary",
+    "pages/drill/words/cement",
+    "pages/drill/words/practice_summary",
+    "pages/drill/words/word",
+    "pages/drill/words/search",
+
+    "pages/community/all_rankings",
+    "pages/community/quiz",
+    "pages/community/askDetails",
+    "pages/community/personalData",
+    "pages/community/Upload",
+    "pages/community/answer",
+
+    "pages/user/myDrill",
+    "pages/user/myQuiz",
+    "pages/user/myAnswer"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/drill",
+        "text": "训练",
+        "iconPath":"pages/images/ico1-default.png",
+        "selectedIconPath":"pages/images/ico1.png"
+      },
+      {
+        "pagePath": "pages/community",
+        "text": "社区",
+        "iconPath": "pages/images/ico2-default.png",
+        "selectedIconPath": "pages/images/ico2.png"
+      },
+      {
+        "pagePath":"pages/user",
+        "text":"我的",
+        "iconPath": "pages/images/ico3-default.png",
+        "selectedIconPath": "pages/images/ico3.png"
+      }
+    ],
+    "color" : "#B2B9BB",
+    "selectedColor" :	"#00CC91",
+    "backgroundColor" : "#fff"
+  }
+}

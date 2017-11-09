@@ -1,0 +1,58 @@
+ .head_word{
+  font-size: 34rpx;
+  font-weight: bold;
+  margin-bottom: 20rpx;
+}
+.head_soundmark{
+  font-size:26rpx;
+  display: flex;
+  align-items: center;
+}
+.words_content{
+  margin-top: 20rpx;
+  font-size:26rpx;
+  color:#353535;
+}
+.head_soundmark image{
+  margin-left:10rpx;
+  width:47rpx;
+  height:39rpx;
+}
+.head_box{
+  padding: 40rpx;
+}
+.head_box + .head_box {
+  border-top:10rpx solid #e8e8e8;
+}
+.page{
+  background:#fff;
+  padding-bottom:80rpx;
+}
+.page_all {
+  height: 100%;
+  background: #fff;
+}
+.btn{
+  width:250rpx;
+  height: 80rpx;
+  font-size:28rpx;
+  line-height: 80rpx;
+  border-radius: 0;
+}
+.btn::after{
+  border-radius: 0;
+}
+.page__ft .pbtn{
+  background-color:#00cc97;
+}
+
+.page__ft .pbtn[disabled]{
+  background-color:#06ebb1;
+}
+.page__ft {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #fff; 
+  display: flex;
+}

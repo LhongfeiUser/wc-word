@@ -1,0 +1,43 @@
+<view class='page'>
+  <view class="sliding">
+    <view class="head_word">
+      <view class="word">{{wordMeaning.word}}</view>
+      <view class="soundmark">
+        {{wordMeaning.soundmark}}
+        <image src='../../images/trumpet.png' bindtap="audioPlay"></image>
+      </view>
+    </view>
+    <view class="test_method" wx:for="{{wordMeaning.testMethodList}}" wx:key="index">
+      <view class='words_content'>
+        <view class="words_content_p">{{item.type}}{{item.chinese}}:{{item.english}}</view>
+        <view class="words_content_t">{{index+1}}.</view>
+      </view>
+      <view wx:if="{{category == 3}}">
+        <view hidden='{{item.example == null}}' class='words_content'>
+          <view class="words_content_p">{{item.example}}</view>
+          <view class="words_content_t">例</view>
+        </view>
+        <view hidden='{{item.synonym == null}}' class='words_content'>
+          <view class="words_content_p">{{item.synonym}}</view>
+          <view class="words_content_t">同</view>
+        </view>
+        <view hidden='{{item.homoionym == null}}' class='words_content'>
+          <view class="words_content_p">{{item.homoionym}}</view>
+          <view class="words_content_t">近</view>
+        </view>
+        <view hidden='{{item.antonym == null}}' class='words_content'>
+          <view class="words_content_p">{{item.antonym}}</view>
+          <view class="words_content_t">反</view>
+        </view>
+        <view hidden='{{item.derivative == null}}' class='words_content'>
+          <view class="words_content_p">{{item.derivative}}</view>
+          <view class="words_content_t">派</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="page__ft">
+    <button class="btn" type="default" bindtap="bindNavigateBackTap">返回</button>
+  </view>
+  <audio  src="" id="myAudio" ></audio>
+</view>

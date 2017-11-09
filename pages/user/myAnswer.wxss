@@ -1,0 +1,107 @@
+/* pages/user/myAnswer.wxss */
+.page {
+  width: 100%;
+  height: 100%;
+  font-size: 24rpx;
+}
+
+/*提问  */
+
+.iconfont {
+  font-size: 18rpx;
+}
+
+.quiz {
+  background: #fff;
+  padding: 14rpx 30rpx 25rpx;
+  margin-bottom: 20rpx;
+}
+
+.quizUser {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 20rpx;
+  flex-wrap: wrap;
+}
+
+.headPortrait {
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.headPortrait image {
+  width: 100%;
+  height: 100%;
+}
+
+.nicknameBox {
+  color: #cecece;
+  margin: 0 60rpx 0 20rpx;
+  vertical-align: top;
+  display: flex;
+  flex-direction: column;
+}
+
+.nickname {
+  padding-bottom: 5rpx;
+  display: inline-block;
+}
+
+.quizTime {
+  display: inline-block;
+}
+
+.describe {
+  display: block;
+  font-size: 26rpx;
+  color: #999;
+  margin-bottom: 39rpx;
+}
+
+.praise {
+  display: flex;
+  color: #cecece;
+}
+
+.icon-critic {
+  font-size: 20rpx;
+}
+
+.oppose {
+  margin-left: 51rpx;
+}
+
+.writeAnswer {
+  margin-left: 260rpx;
+  color: #00cc91;
+  font-weight: 700;
+}
+
+.praiseItem {
+  display: flex;
+  align-items: baseline;
+}
+
+.praiseItem view {
+  margin-left: 13rpx;
+}
+
+/* 回答 */
+
+.answerTitle {
+  background: #fff;
+  text-align: center;
+  font-size: 26rpx;
+  color: #cecece;
+  padding: 13rpx 0;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.active {
+  color: #00cc91;
+}
+.quizPicBox{
+  overflow: hidden;
+}

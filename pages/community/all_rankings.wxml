@@ -1,0 +1,27 @@
+<view class='page'>
+  <view class='peopleNearby'>
+    <view class='nearbyTitle'>
+      <view>全部排名</view>
+    </view>
+    <view class='detailedInformation_box'>
+      <view class='detailedInformation' wx:for='{{userList}}' wx:key='index'>
+        <view class='detailedInformation_bg'>
+          <image src='https://weichen.bjtcsj.com/file/{{item.backImgUrl}}'></image>
+        </view>
+        <view class='userNickName'>{{item.nickname}}</view>
+        <view class='peopleNearbyUser'>
+          <textarea placeholder='{{item.sign}}'></textarea>
+          <view class='nearbyInfo'>
+            <view></view>
+            <view class='todayDrill'>
+              <view class='iconfont icon-time'></view>
+              <view>{{item.todayTime}}min</view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="loading" hidden="{{!loading}}">正在载入更多...</view>
+  <view class="loading complete" hidden="{{!loadingComplete}}">已加载全部</view>
+</view>

@@ -1,0 +1,99 @@
+<view class='page'>
+  <view class='self'>
+    <view class='userInfoBox'>
+      <view class='userInfo-bg'></view>
+      <view class='userInfo'>
+        <view class='headPortraitBox'>
+          <view class='headPortrait' bindtap='bindpersonalDataTap'>
+            <image wx:if="{{userList.user.headImgUrl!=null}}" src='https://weichen.bjtcsj.com/file/{{userList.user.headImgUrl}}'></image>
+          </view>
+          <view class='userNickeName'>{{userList.user.nickname}}</view>
+        </view>
+        <view class='myDatum'>
+          <view class='quiz myDatum_item'>
+            <text>{{userList.questionsNum}}</text>
+            <view>提问</view>
+          </view>
+          <view class='answer myDatum_item'>
+            <text>{{userList.answersNum}}</text>
+            <view>回答</view>
+          </view>
+          <view class='dynamic myDatum_item'>
+            <text>{{userList.user.signNumber}}</text>
+            <view>动态</view>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <view class='schedule'>
+      <view class='scheduleTop'>
+        <view class='learning'>
+          <view class='learningSchedule'>学习进度</view>
+          <view class='percentage'>{{percent}}%</view>
+        </view>
+        <view class='vocabulary'>{{totalTime}}/700</view>
+      </view>
+      <progress percent="{{percent}}" activeColor='#00CC91' />
+    </view>
+
+    <view class='content'>
+      <view class='contentDrill content-items' bindtap='bindMyDrillTap'>
+        <view class='icon-items'>
+          <view class='iconfont icon-mytrain' style='color: #35C879;'></view>
+        </view>
+        <view class='myTitle'>我的训练</view>
+        <view class='iconRight'>
+          <view class='iconfont .icon-right'></view>
+        </view>
+      </view>
+      <view class='contentQuiz content-items' bindtap='bindMyQuizTap'>
+        <view class='icon-items'>
+           <view class='iconfont icon-myquestion' style='color:#F9CD13;'></view>
+        </view>
+        <view class='myTitle'>我的提问</view>
+        <view class='iconRight'>
+          <view class='iconfont .icon-right'></view>
+        </view>
+      </view>
+      <view class='contentAnswer content-items' bindtap='bindMyAnswerTap'>
+        <view class='icon-items'>
+          <view class='iconfont icon-myanswer' style='color:#70AAEE;'></view>
+        </view>
+        <view class='myTitle'>我的回答</view>
+        <view class='iconRight'>
+          <view class='iconfont .icon-right'></view>
+        </view>
+      </view>
+      <view class='contentAnswer content-items' bindtap='bindTestGradeTap'>
+        <view class='icon-items'>
+          <view class='iconfont icon-retest' style='color:#25C97C;'></view>
+        </view>
+        <view class='myTitle'>重做评估推荐测试</view>
+        <view class='iconRight'>
+          <view class='iconfont .icon-right'></view>
+        </view>
+      </view>
+    </view>
+
+    <view class='diary'>
+      <view class='diaryHead'>
+        <view>学习日记</view>
+        <view class='report'></view>
+      </view>
+      <view class='diaryDate'>
+        <view class='year'>2017</view>
+        <view class='date_list'  wx:for='{{diaryList}}' wx:key='index'>
+          <view class='dateTitle' wx:if='{{(index==0)||(item.date!=diaryList[index-1].date)}}'>{{item.date}}</view>
+          <view class='date_items'>
+            <view class='nowTime'>{{item.createdTime}}</view> ·
+            <view class='productTitle'>{{item.drillName}}</view>
+            <view class='drillTime'>{{item.time}}min</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="loading" hidden="{{!loading}}">正在载入更多...</view>
+    <view class="loading complete" hidden="{{!loadingComplete}}">已加载全部</view>
+  </view>
+</view>

@@ -1,0 +1,38 @@
+/* pages/community/answer.wxss */
+.page {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+}
+
+.main {
+  height: 100%;
+  margin: 0 30rpx;
+  padding-bottom:100rpx;
+}
+.title {
+  font-size: 26rpx;
+  color: #B2B2B2;
+  padding: 30rpx 0 20rpx 0;
+}
+textarea {
+  font-size: 26rpx;
+  width: 100%;
+  height: 37rpx;
+  border-bottom: 1rpx solid #E5E5E5;
+}
+textarea.describe {
+  height: 268rpx;
+  background: #EEEFEE;
+  font-size: 30rpx;
+  color:#222;
+}
+.btn{
+  width:100%;
+  background: #00CC91;
+  font-size:36rpx;
+  position: fixed;
+  bottom: 0;
+  border-radius: 0;
+  color:#fff;
+}

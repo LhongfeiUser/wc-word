@@ -1,0 +1,22 @@
+<!--pages/community/quiz.wxml-->
+<view class='page'>
+  <view class='main'>
+    <view class='title'>问题标题</view>
+    <input bindinput='bindQuestionTap' placeholder='请输入标题' placeholder-style='color:#CECECE;font-size:26rpx'></input>
+    <view class='title'>选择标签</view>
+    <input bindinput='bindAddTap' placeholder='请选择标签' placeholder-style='color:#CECECE;font-size:26rpx' value='{{label}}'></input>
+    <view class='label'>
+      <view class='_labelContent {{labelClass[index]}}' wx:for='{{labelList}}' wx:key='index' bindtap='bindAddLabelTap' id='{{index}}'>{{item.label}}</view>
+    </view>
+    <view class='title'>问题描述(可选)</view>
+    <textarea class='describe' maxlength='200' bindinput='bindDescribeTap'></textarea>
+    <view class='addPic' bindtap='bindAddPic'>
+      <view>添加图片</view>
+      <view class='iconfont icon-img'></view>
+    </view>
+    <view class='pic' wx:if="{{addPic != ''}}">
+      <image src='{{addPic}}'></image>
+    </view> 
+  </view>
+  <button class='btn' type='button' bindtap='bindSubmitTap'>提交</button>
+</view>

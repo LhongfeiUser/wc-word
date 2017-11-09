@@ -1,0 +1,84 @@
+/* pages/user/myDrill.wxss */
+.bottom {
+  background: #fff;
+}
+
+.my_drill {
+  font-size: 26rpx;
+  height: 87rpx;
+  line-height: 87rpx;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 30rpx;
+  color: #888;
+}
+
+.drill_add {
+  color: #353535;
+}
+
+.drill_way {
+  position: relative;
+  height: 182rpx;
+  display: flex;
+  justify-content: space-between;
+  border-top: 2rpx solid #f8f8f8;
+}
+
+.drill_way image {
+  width: 135rpx;
+  height: 131rpx;
+}
+
+.title {
+  margin: 30rpx;
+}
+
+.title view {
+  font-size: 34rpx;
+  color: #353535;
+  height: 48rpx;
+  line-height: 48rpx;
+  margin-bottom: 20rpx;
+}
+
+.title text {
+  color: #888;
+  font-size: 26rpx;
+  height: 37rpx;
+  line-height: 37rpx;
+}
+
+.drill_img {
+  position: relative;
+  width: 118rpx;
+  height: 118rpx;
+  margin: 32rpx 30rpx;
+}
+
+.add_product {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.circle {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.draw_btn {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  text-align: center;
+  line-height: 118rpx;
+  font-size: 26rpx;
+  color: #888;
+} 

@@ -1,0 +1,32 @@
+<!--pages/user/myQuiz.wxml-->
+<view>
+  <view class='my_drill'>
+    <view>我的提问</view>
+  </view>
+  <view class='ask'>
+      <view class='askContent' wx:for='{{discussQuestionList}}' wx:key='index'  bindtap='bindAskDetailsTap' id='{{item.id}}'>
+        <view class='issue'>{{item.title}}</view>
+        <view class='label label_item'>
+          <view class='problemSpecific label_item' wx:for='{{item.labelList}}' wx:for-item='items' wx:key='index'>
+            <view wx:if='{{items!=""}}'>{{items}}</view>
+          </view>
+          <view class='userQuestionTime label_item'>
+            <view>{{nickName}}</view>
+            <view class='quiz'>{{item.createdTime}}</view>
+          </view>
+        </view>
+        <view class='contentDetails'>
+            <view  class='quizPic' wx:if='{{item.imgUrl!=null}}'>
+              <image wx:if='{{item.imgUrl!=null}}' src='https://weichen.bjtcsj.com/file/{{item.imgUrl}}'></image>
+            </view> 
+            <view class='contentCharacter'>
+              {{item.content}}
+            </view>  
+        </view>
+        <view class='respond'>
+          <view>{{item.likeNum}}人赞同</view>
+          <view>{{item.answerNum}}个回答</view>
+        </view>
+      </view>
+    </view>
+</view>

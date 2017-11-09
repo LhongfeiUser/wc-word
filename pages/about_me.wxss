@@ -1,0 +1,38 @@
+.page{
+  width:100%;
+  height:100%;
+}
+.main{
+  width:100%;
+  font-size: 28rpx;
+  color:#888888;
+}
+.section__title{
+  margin-top:40rpx;
+  margin-bottom: 16rpx;
+  padding-left: 30rpx;
+}
+.picker{
+  width:750rpx;
+  background-color:#ffffff;
+  font-size:34rpx;
+  color:#000000;
+  padding-left: 30rpx;
+  height:92rpx;
+  line-height: 92rpx;
+  display: flex;
+}
+.picker-name{
+  width:170rpx;
+}
+.isPlaceholder{
+  color:#b2b2b2;
+}
+.main .btn{
+  margin-top:40rpx;
+  background-color:#00cc97;
+}
+
+.main .btn[disabled]{
+  background-color:#06ebb1;
+}

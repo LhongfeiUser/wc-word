@@ -1,0 +1,30 @@
+<view class='page'>
+  <view class='main'>
+    <view class="section">
+      <view class="section__title">计划考试时间</view>
+      <view class='picker_box'>
+        <picker bindchange="yearChange" value="{{yearIndex}}" range="{{yearArray}}">
+          <view class="picker">
+            <view class="picker-name">考试年份</view><view class="picker-value {{yearClass}}">{{yearValue}}</view>
+          </view>
+        </picker>
+        <picker bindchange="daysChange" disabled='{{isforbidden}}' value="{{daysIndex}}" range="{{daysArray}}">
+          <view class="picker">
+            <view class="picker-name">考试日期</view><view class="picker-value {{daysClass}}">{{daysValue}}</view>
+          </view>
+        </picker>
+      </view>
+    </view>
+    <view class="section">
+      <view class="section__title">期望考试分数(V+Q+AW)</view>
+      <view class='picker_box'>
+        <picker mode="multiSelector" bindchange="expectedChange" value="{{expectedIndex}}" range="{{expectedArray}}">
+          <view class="picker">
+            <view class="picker-name">期望分数</view><view class="picker-value {{expectedClass}}">{{expectedValue}}</view>
+          </view>
+        </picker>
+      </view>
+    </view>
+    <button type="primary" size="default" disabled="{{btnDisabled}}" class="btn" bindtap="bindBtnTap">确认</button>
+  </view>
+</view>
