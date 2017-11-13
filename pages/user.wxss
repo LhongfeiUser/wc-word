@@ -32,19 +32,17 @@
 }
 
 .headPortrait {
-   /* width: 120rpx;
+  width: 120rpx;
   height: 120rpx;
   border: 4rpx solid #fff;
-  border-radius: 50%;
-  overflow: hidden;  */
+  border-radius: 50%; 
+  overflow: hidden;  
 }
 
 .headPortrait image {
- width: 120rpx;
-  height: 120rpx;
-  border: 4rpx solid #fff;
-  border-radius: 50%;
-  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  vertical-align:top;
 }
 
 .userNickeName {

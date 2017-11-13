@@ -1,0 +1,95 @@
+<!--pages/drill/morningCall/mockExam.wxml-->
+<view class='page'>
+  <view class='container'>
+    <view class='header'>
+      <view class='gre-logo'>
+        <view class='gre'>GRE</view>
+        <view>Practice Test</view>
+      </view>
+      <view class='buttons'>
+        <view class='btn-box' wx:if='{{true}}'>
+          <view class='btn btnFirst'>
+            <view>Exit</view>
+            <view>secton</view>
+          </view>
+          <view class='btn'>
+            <view>Review</view>
+            <view class='iconfont icon-shuqian'></view>
+          </view>
+          <view class='btn'>
+            <view>Mark</view>
+            <view class='iconfont icon-artboard61'></view>
+          </view>
+          <view class='btn'>
+            <view>Back</view>
+            <view class='iconfont icon-zuoyoufanzhuanjiantou'></view>
+          </view>
+          <view class='btn'>
+            <view>Next</view>
+            <view class='iconfont icon-zuoyoufanzhuanjiantou'></view>
+          </view>
+        </view>
+        <view class='button' wx:if='{{false}}'>
+          <view>Continue</view>
+          <view class='iconfont icon-youjiantou'></view>
+        </view>
+      </view>
+    </view>
+    <view class='section'>
+      <view class='sectionContent' wx:if='{{false}}'>
+        <view>Section 1 of 2</view>
+        <view>00:13:56</view>
+      </view>
+    </view>
+    <view class='content'>
+      <view class='content-item1' wx:if='{{false}}'>
+        <view class='content-title'>
+          <view class='title-h2'>General Test Information</view>
+          <view class='title-h2'>Quantitative Reasoning</view>
+          <view class='title-h2'>17 Minutes30 Seconds</view>
+        </view>
+        <view class='subheadBox'>
+          <view class='subhead' wx:if='{{false}}'>Timing and Break</view>
+          <text>
+       There will be a 10-minute break following section 3 of the test.At that time notify the administrator if you wish to leave the room.Between sections you may pause for 60 seconds if you choose.
+       If you wish to leave your seat at any other time during the test,please raise your hand——section timing will not stop for this type of break.
+       There will be a 10-minute break following section 3 of the test.At that time notify the administrator if you wish to leave the room.Between sections you may pause for 60 seconds if you choose.
+       If you wish to leave your seat at any other time during the test,please raise your hand——section timing will not stop for this type of break.
+       There will be a 10-minute break following section 3 of the test.At that time notify the administrator if you wish to leave the room.Between sections you may pause for 60 seconds if you choose.
+       If you wish to leave your seat at any other time during the test,please raise your hand——section timing will not stop for this type of break.
+       </text>
+        </view>
+      </view>
+      <view class='content-item2' wx:if='{{false}}'>
+        <view class='subjectDefinition'>
+          Select one entry for the blank. Fill the blank in the way that best completes the text.
+        </view>
+        <text>
+       A new television documentary focuses on one of the prime minister’s defining contradictions, portraying her as a woman who cultivated an image of ______, but who liked to live grandly.
+       </text>
+        <view class='option-box'>
+          <view class='option-title' wx:if='{{false}}'>Blank (i)</view>
+          <view class='option'>irascibility</view>
+          <view class='option'>irascibility</view>
+          <view class='option'>irascibility</view>
+          <view class='option'>irascibility</view>
+          <view class='option'>irascibility</view>
+        </view>
+      </view>
+      <view class='content-item3'>
+         <view class='subjectDefinition'>
+          Select one entry for the blank. Fill the blank in the way that best completes the text.
+        </view>
+        <text>
+       A new television documentary focuses on one of the prime minister’s defining contradictions, portraying her as a woman who cultivated an image of ______, but who liked to live grandly.
+       </text>
+       <view class='option-box'>
+         <view class='option3'>
+           <view class='iconfont icon-cha diamond'></view>
+           <view>warbling</view>
+         </view>
+       </view>
+      </view>
+    </view>
+  </view>
+</view>

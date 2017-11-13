@@ -155,5 +155,10 @@ Page({
         url: '/pages/drill/join?id=' + product.id,
       })
     }
+  },
+  mockExam:function(){
+    wx.navigateTo({
+      url: 'drill/morningCall/mockExam',
+    })
   }
 })

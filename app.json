@@ -22,6 +22,8 @@
     "pages/drill/words/practice_summary",
     "pages/drill/words/word",
     "pages/drill/words/search",
+    
+    "pages/drill/morningCall/mockExam",
 
     "pages/community/all_rankings",
     "pages/community/quiz",

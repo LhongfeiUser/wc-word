@@ -1,7 +1,7 @@
 <view class='page'>
   <view class='main'>
     <view class='goal_box'>
-      <view class='goal_top goal'>
+      <view class='goal_top goal' bindtap='mockExam'>
         <view>总训练时长(小时)</view>
         <text>{{totalTime}}</text>
       </view>
