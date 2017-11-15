@@ -160,5 +160,10 @@ Page({
     wx.navigateTo({
       url: 'drill/morningCall/mockExam',
     })
+  },
+  bindResultTap:function(){
+    wx.navigateTo({
+      url: 'drill/morningCall/mockExamResult',
+    })
   }
 })

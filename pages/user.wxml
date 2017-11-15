@@ -4,8 +4,8 @@
       <view class='userInfo-bg'></view>
       <view class='userInfo'>
         <view class='headPortraitBox'>
-          <view class='headPortrait' bindtap='bindpersonalDataTap'>
-            <image wx:if="{{userList.user.headImgUrl!=null}}" src='https://weichen.bjtcsj.com/file/{{userList.user.headImgUrl}}'></image>
+          <view bindtap='bindpersonalDataTap'>
+            <image class='headPortrait' wx:if="{{userList.user.headImgUrl!=null}}" src='https://weichen.bjtcsj.com/file/{{userList.user.headImgUrl}}'></image>
           </view>
           <view class='userNickeName'>{{userList.user.nickname}}</view>
         </view>
@@ -32,7 +32,7 @@
           <view class='learningSchedule'>学习进度</view>
           <view class='percentage'>{{percent}}%</view>
         </view>
-        <view class='vocabulary'>{{totalTime}}/700</view>
+        <view class='vocabulary'>{{totalTime}}/700小时</view>
       </view>
       <progress percent="{{percent}}" activeColor='#00CC91' />
     </view>

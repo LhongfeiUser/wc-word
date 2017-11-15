@@ -18,7 +18,7 @@
           <view>目标分数</view>
           <text>{{user.expectedMark}}</text>
         </view>
-        <view class='goal_bottom_view goal'>
+        <view class='goal_bottom_view goal' bindtap='bindResultTap'>
           <view>考试倒计时(天)</view>
           <text>{{examTime}}</text>
         </view>

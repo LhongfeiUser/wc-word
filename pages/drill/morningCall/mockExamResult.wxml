@@ -1,0 +1,32 @@
+<!--pages/drill/morningCall/mockExamResult.wxml-->
+<view class='page'>
+  <view class='header'>
+    <view class='header-top'>
+      <view class='title'>Verbal Reasoning</view>
+      <view class='iconfont icon-qianjin'></view>
+    </view>
+    <view class='explain'>
+      Within each category below, questions are displayed in order of difficulty from 1 (easy) to 5 (hard).
+    </view>
+  </view>
+  <view class='passage'>
+    <view class='passageContentBox'>
+      <view class='passageTitle'>Reading Comprehension - Longer Passage</view>
+      <view class='content'>
+        <view class='content-left'>
+          <view class='choice'></view>
+          <view class='particulars'>
+            <view></view>
+            <view></view>
+            <icon type="success"></icon>
+          </view>
+        </view>
+        <view class='content-right'>
+          <view class='iconfont icon-bofang'></view>
+          <view>视频讲解</view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+</view>

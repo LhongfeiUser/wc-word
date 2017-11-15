@@ -15,7 +15,6 @@ Page({
     console.log(wordMeaning.word)
     this.audioCtx = wx.createAudioContext('myAudio')
     this.audioCtx.setSrc("http://weichen.bjtcsj.com/file/sound/" + wordMeaning.word + ".mp3")
-    this.audioCtx.play()
   },
   audioPlay: function () {
     this.audioCtx.play()

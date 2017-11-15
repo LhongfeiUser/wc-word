@@ -67,7 +67,6 @@ Page({
         }
         that.audioCtx = wx.createAudioContext('myAudio')
         that.audioCtx.setSrc("http://weichen.bjtcsj.com/file/sound/" + that.data.array[0].word + ".mp3")
-        that.audioCtx.play()
       }
     })
   
@@ -85,7 +84,6 @@ Page({
         })
       }
       this.audioCtx.setSrc("http://weichen.bjtcsj.com/file/sound/" + this.data.array[e.detail.current].word + ".mp3")
-      this.audioCtx.play()
     } else {
       clearTimeout(this.timeout)
       wx.redirectTo({

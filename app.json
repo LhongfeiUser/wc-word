@@ -24,6 +24,7 @@
     "pages/drill/words/search",
     
     "pages/drill/morningCall/mockExam",
+    "pages/drill/morningCall/mockExamResult",
 
     "pages/community/all_rankings",
     "pages/community/quiz",

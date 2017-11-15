@@ -44,7 +44,7 @@
           <view class="iconfont icon-right "></view>
         </view>
         <view class="bottom_line_item" bindtap='bindReciteTap' data-type='2'>
-          <view>乱序背词</view>
+          <view>乱序背词[全本乱序]</view>
           <view class="iconfont icon-right "></view>
         </view>
       </view>
