@@ -24,8 +24,14 @@ Page({
       },
       method: 'GET',
       success: function (res) {
+        var product = res.data.product
+        var examList = []
+        if (product.category==4){
+          examList = res.data.examList
+        }
         that.setData({
-          product: res.data.product
+          product: product,
+          examList: examList
         })
        
       }

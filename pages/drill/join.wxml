@@ -33,7 +33,7 @@
       <view class="explain_title">训练说明</view>
       <view class="explain_main">{{product.description}}</view>
     </view>
-    <view class='bottom'>
+    <view class='bottom' wx:if='{{(product.category==2)||(product.category==3)}}'>
       <view class='bottom-title'>功能列表</view>
       <view class='bottom_main'>
         <view class="bottom_line_item">
@@ -42,6 +42,15 @@
         </view>
         <view class="bottom_line_item">
           <view>乱序背词[全本乱序]</view>
+          <view class="iconfont icon-right "></view>
+        </view>
+      </view>
+    </view>
+    <view class='bottom' wx:if='{{product.category==4}}'>
+      <view class='bottom-title'>套題列表</view>
+      <view class='bottom_main'>
+        <view class="bottom_line_item"  wx:for="{{examList}}">
+          <view>{{item.name}}</view>
           <view class="iconfont icon-right "></view>
         </view>
       </view>

@@ -36,7 +36,7 @@
             </view>
         </view>
     </view>
-    <view class='bottom'>
+    <view class='bottom' wx:if='{{(product.category==2)||(product.category==3)}}'>
       <view class='bottom-title'>功能列表</view>
       <view class='bottom_main'>
         <view class="bottom_line_item" bindtap='bindReciteTap' data-type='1'>
@@ -45,6 +45,15 @@
         </view>
         <view class="bottom_line_item" bindtap='bindReciteTap' data-type='2'>
           <view>乱序背词[全本乱序]</view>
+          <view class="iconfont icon-right "></view>
+        </view>
+      </view>
+    </view>
+    <view class='bottom' wx:if='{{product.category==4}}'>
+      <view class='bottom-title'>套題列表</view>
+      <view class='bottom_main'>
+        <view class="bottom_line_item"  wx:for="{{examList}}" bindtap='bindReciteTap' data-type='{{item.id}}'>
+          <view>{{item.name}}</view>
           <view class="iconfont icon-right "></view>
         </view>
       </view>

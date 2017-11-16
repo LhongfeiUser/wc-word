@@ -1,4 +1,4 @@
-<!--pages/drill/morningCall/mockExam.wxml-->
+<import src="/utils/wxParse/wxParse.wxml"/>
 <view class='page'>
   <view class='container'>
     <view class='header'>
@@ -7,86 +7,62 @@
         <view>Practice Test</view>
       </view>
       <view class='buttons'>
-        <view class='btn-box' wx:if='{{false}}'>
-          <view class='btn btnFirst' bindtap='bindExitTap'>
+        <view class='btn-box'>
+          <view class='btn btnFirst'>
             <view>Exit</view>
-            <view>secton</view>
+            <view>Section</view>
           </view>
-          <view class='btn' bindtap='bindReviewTap'>
+          <view class='btn'>
             <view>Review</view>
             <view class='iconfont icon-shuqian'></view>
           </view>
-          <view class='btn' bindtap='bindMarkTap'>
+          <view class='btn'>
             <view>Mark</view>
             <view class='iconfont icon-artboard61'></view>
           </view>
-          <view class='btn' bindtap='bindBackTap'>
+          <view class='btn' wx:if='{{question.serialNumber==1}}'>
             <view>Back</view>
             <view class='iconfont icon-zuoyoufanzhuanjiantou'></view>
           </view>
-          <view class='btn' bindtap='bindNextTap'>
+          <view class='btn btnMain' data-type='2' bindtap='bindUpdateTap' wx:if='{{question.serialNumber!=1}}'>
+            <view>Back</view>
+            <view class='iconfont icon-zuoyoufanzhuanjiantou'></view>
+          </view>
+          <view class='btn btnMain' data-type='1' bindtap='bindUpdateTap'>
             <view>Next</view>
             <view class='iconfont icon-zuoyoufanzhuanjiantou'></view>
           </view>
         </view>
 
-        <view class='button' wx:if='{{false}}' bindtap='bindContinueTap'>
-          <view>Continue</view>
-          <view class='iconfont icon-youjiantou'></view>
-        </view>
-
-        <view class='threeButton' wx:if='{{true}}'>
-          <view class='btn' bindtap='bindReviewTap'>
-            <view>Review</view>
-            <view class='iconfont icon-shuqian'></view>
-          </view>
-          <view class='btn' bindtap='bindReturnTap'>
-            <view>Return</view>
-            <view class='iconfont icon-zuoyoufanzhuanjiantou'></view>
-          </view>
-          <view class='btn continue-btn' bindtap='bindContinueTap'>
-            <view>Continue</view>
-            <view class='iconfont icon-youjiantou'></view>
-          </view>
-        </view>
       </view>
     </view>
     <view class='section'>
-      <view class='sectionContent' wx:if='{{true}}'>
-        <view>Section 1 of 2</view>
-        <view wx:if='{{true}}'>00:13:56</view>
+      <view class='sectionContent'>
+        <view>Section {{section.serialNumber}} of {{sectionNumbers}} | Question {{question.serialNumber}} of {{section.questionNumbers}}</view>
+        <view>{{lTime}}</view>
       </view>
     </view>
     <view class='content'>
-      <view class='content-item1' wx:if='{{false}}'>
-        <view class='content-title' wx:if='{{false}}'>
-          <view class='title-h2'>General Test Information</view>
-        </view>
-        <view class='subheadBox'>
-          <view class='subhead' wx:if='{{false}}'>Timing and Break</view>
-          <text>
-       There will be a 10-minute break following section 3 of the test.At that time notify the administrator if you wish to leave the room.Between sections you may pause for 60 seconds if you choose.
-       If you wish to leave your seat at any other time during the test,please raise your hand——section timing will not stop for this type of break.
-       There will be a 10-minute break following section 3 of the test.At that time notify the administrator if you wish to leave the room.Between sections you may pause for 60 seconds if you choose.
-      
-       </text>
-        </view>
-      </view>
-
-      <view class='content-item2' wx:if='{{false}}'>
+      <view class='content-item2' wx:if='{{question.type<4}}'>
         <view class='subjectDefinition'>
           Select one entry for the blank. Fill the blank in the way that best completes the text.
         </view>
-        <text>
-       A new television documentary focuses on one of the prime minister’s defining contradictions, portraying her as a woman who cultivated an image of ______, but who liked to live grandly.
-       </text>
+        <view class='question-content'>
+          <template is="wxParse" data="{{wxParseData:content.nodes}}"/>
+        </view>
         <view class='option-box'>
-          <view class='option-title' wx:if='{{false}}'>Blank (i)</view>
-          <view class='option'>irascibility</view>
-          <view class='option'>irascibility</view>
-          <view class='option'>irascibility</view>
-          <view class='option'>irascibility</view>
-          <view class='option'>irascibility</view>
+          <view class='options'>
+            <view class='option-title' wx:if='{{question.type>1}}'>Blank (i)</view>
+            <view class='option {{answers[index]}}' wx:for='{{options}}' data-blank='1' data-index='{{index}}' bindtap='bindSelect2Tap'>{{item}}</view>
+          </view>
+          <view class='options'  wx:if='{{question.type>1}}'>
+            <view class='option-title'>Blank (ii)</view>
+            <view class='option {{answers2[index]}}' wx:for='{{options2}}' data-blank='2' data-index='{{index}}' bindtap='bindSelect2Tap'>{{item}}</view>
+          </view>
+          <view class='options' wx:if='{{question.type==3}}'>
+            <view class='option-title' >Blank (iii)</view>
+            <view class='option {{answers3[index]}}' wx:for='{{options3}}' data-blank='3' data-index='{{index}}' bindtap='bindSelect2Tap'>{{item}}</view>
+          </view>
         </view>
       </view>
 
@@ -123,7 +99,7 @@
         </view>
       </view>
 
-      <view class='content-item4' wx:if='{{true}}'>
+      <view class='content-item4' wx:if='{{false}}'>
         <view class='item4-top'>
           <view class='item4-title'>
             Question 5、6 is based on this passage.

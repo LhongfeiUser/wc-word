@@ -25,6 +25,16 @@
     
     "pages/drill/morningCall/mockExam",
     "pages/drill/morningCall/mockExamResult",
+    "pages/drill/morningCall/exam",
+    "pages/drill/morningCall/start_exam",
+    "pages/drill/morningCall/start_section",
+    "pages/drill/morningCall/review",
+    "pages/drill/morningCall/exit_section",
+    "pages/drill/morningCall/finish_section",
+    "pages/drill/morningCall/question",
+    "pages/drill/morningCall/answer_key",
+    "pages/drill/morningCall/time_out",
+    "pages/drill/morningCall/mockExamExplain",
 
     "pages/community/all_rankings",
     "pages/community/quiz",

@@ -1,0 +1,31 @@
+<view class='page_all'>
+  <view class='page'>
+    <view class='top'>
+      <view class='particulars_box'>
+        <image wx:if="{{exam!=null}}" src='https://weichen.bjtcsj.com/file/{{exam.imgUrl}}'></image>
+        <view class='particulars_title'>
+          <view>{{exam.name}}</view>
+          <text>{{exam.finishUserNumber}}人已完成</text>
+        </view>
+      </view>
+      <view class='explain'>
+        <view class="explain_title">套题说明</view>
+        <view class="explain_main" wx:if='{{exam.description!=""}}'>{{exam.description}}</view>
+        <view class="explain_main" wx:if='{{exam.description==""}}'>暂无详细说明</view>
+      </view>  
+    </view>
+    <view class='bottom'>
+      <view class='bottom-title'>答题记录</view>
+      <view class='bottom_main'>
+        <view class="bottom_line_item"  wx:for="{{userExamList}}" bindtap='bindReciteTap' data-userExamId='{{item.id}}'>
+          <view>{{item.createdTime}}</view>
+          <view class="iconfont icon-right "></view>
+        </view>
+      </view>
+    </view>
+    <view class="page__ft">
+      <button type="primary" class='btn pbtn' bindtap='bindStartExamTap' wx:if='{{continue==null}}'>开始测试</button>
+      <button type="primary" class='btn pbtn' bindtap='bindContinueExamTap' wx:if='{{continue!=null}}'>继续测试</button>
+    </view>
+  </view>
+</view>

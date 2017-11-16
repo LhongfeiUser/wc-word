@@ -1,46 +1,108 @@
 /* pages/drill/morningCall/mockExamResult.wxss */
-.page{
-  width:100%;
+
+.page {
+  width: 100%;
   font-size: 26rpx;
   font-family: PingFangSC-Semibold;
 }
-.header{
+
+.header {
   position: relative;
   width: 100%;
   background: #fff;
 }
-.header-top{
+
+.header-top {
   display: flex;
   justify-content: center;
-  padding:30rpx 0;
+  padding: 30rpx 0;
 }
-.title{
-color: #000000;
-font-weight: 700;
+
+.title {
+  color: #000;
+  font-weight: 700;
 }
-.icon-qianjin{
+
+.icon-next {
   position: absolute;
-  right:30rpx;
-  top:30rpx;
+  right: 30rpx;
+  top: 30rpx;
   font-size: 40rpx;
-  color: #CAD1CE;
+  color: #cad1ce;
 }
-.explain{
-  padding:20rpx 30rpx 20rpx 0;
-  margin-left:30rpx;
-  border-top:1rpx solid #E5E5E5;
+
+.explain {
+  padding: 20rpx 30rpx 20rpx 0;
+  margin-left: 30rpx;
+  border-top: 1rpx solid #e5e5e5;
   color: #999;
   margin-bottom: 20rpx;
   overflow: hidden;
 }
-.passage{
+
+.passage {
   width: 100%;
   background: #fff;
+  margin-bottom: 20rpx;
 }
-.passageContentBox{
-  margin-left:30rpx;
+
+.passageContentBox {
+  margin-left: 30rpx;
 }
-.passageTitle{
+
+.passageTitle {
   color: #999;
-  padding:26rpx 0 16rpx 0;
+  padding: 26rpx 0 16rpx 0;
+}
+
+.content {
+  border-top:1rpx solid #e5e5e5;
+  padding: 20rpx 30rpx 20rpx 0;
+  display: flex;
+  justify-content: space-between;
+  font-size: 30rpx;
+}
+
+.content-left {
+}
+
+.choice {
+  color: #222;
+  margin-bottom:20rpx;
+  font-weight: 500;
+}
+
+.particulars {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 26rpx;
+  color:#CFCFCF;
+}
+.star{
+  width:160rpx;
+  display: flex;
+}
+
+.answerTime {
+  display: flex;
+}
+.icon-spenttime{
+  margin-right:10rpx;
+}
+
+.content-right {
+  display: flex;
+  align-items: center;
+  background: #25c97c;
+  border-radius: 11rpx;
+  padding: 20rpx 10rpx;
+  color:#fff;
+  font-weight: 500;
+}
+.vio-explain{
+margin-left:10rpx;
+}
+.icon-right1{
+  color:#25c97c;
 }

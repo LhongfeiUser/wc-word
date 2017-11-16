@@ -1,0 +1,36 @@
+<view class='page'>
+  <view class='container'>
+    <view class='header'>
+      <view class='gre-logo'>
+        <view class='gre'>GRE</view>
+        <view>Practice Test</view>
+      </view>
+      <view class='buttons'>
+        <view class='button' bindtap='bindContinueTap'>
+          <view>Continue</view>
+          <view class='iconfont icon-youjiantou'></view>
+        </view>
+      </view>
+    </view>
+    <view class='section'>
+      <view class='sectionContent'>
+        
+      </view>
+    </view>
+    <view class='content'>
+      <view class='content-item1'>
+        <view class='content-title'>
+          <view class='title-h2'>General Test Information</view>
+        </view>
+        <view class='subheadBox'>
+          <view class='subhead'>Timing and Break</view>
+          <text>There will be a 10-minute break following section 3 of the test.At that time notify the administrator if you wish to leave the room.Between sections you may pause for 60 seconds \n if you choose.If you wish to leave your seat at any other time during the test,please raise your hand——section timing will not stop for this type of break.</text>  
+          <view class='subhead'>Test Information</view>  
+          <text>If you have a concern about the wording of a test question,please note the section number and the question number on your scratch paper and continue the test.Report your concern to the administrator at the end of the testing session. \n No credit will be given for any reponses marked on scratch paper. Use the scratch paper to work out your answers. All scratch paper must be turned in to the administrator at the end of the test session. \n In each of the Verbal Reasoning and Quantitative Reasoning sections,you may skip and question and return to that question later.You should answer as many questions as possible during each section and manage your time with this in mind.Use the <text class='subheadBold'>Review</text> button at any time during the section to see which question you have answered and which questions you have skipped.</text>
+          <view class='subhead'>Repeater Policy</view>
+          <text>You may take the General Test(computer-based and/or paper-based) only once per 21-day period, and no more than 5 times within and 12-month period.This applies even if you canceled your scores on the test taken previously.If you test more than once per 21-day period, or more than five times in a 12-month period, your new scores will not be reported,your test fee will be forfeited,and you may be banned from future testing. \n Click <text class='subheadBold'>Continue</text> to go on.</text>  
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

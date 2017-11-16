@@ -1,0 +1,43 @@
+<!--pages/drill/morningCall/mockExamExplain.wxml-->
+<view class='page'>
+  <view class='header'>
+    <view class='header-left'>
+      <view class='iconfont'>1</view>
+      <view>首页</view>
+    </view>
+    <view class='header-right'>
+      <view class='nickName'>火舞弟弟</view>
+      <view class='iconfont'>2</view>
+      <view>退出</view>
+    </view>
+  </view>
+  <view class='section'>Section 1 of 2 Question 7 of 10</view>
+  <view class='content'>
+    <view class='question-explain'>
+      <view>
+        <view>答题正误</view>
+        <view>Wrong</view>
+      </view>
+      <view>
+        <view>试题种类</view>
+        <view>Reading Comprehension - Longer Passage</view>
+      </view>
+      <view>
+        <view>试题类型</view>
+        <view>Multiple-choice – Select One</view>
+      </view>
+      <view>
+        <view>试题难度</view>
+        <view>5</view>
+      </view>
+      <view>
+        <view>答题用时</view>
+        <view>00:00</view>
+      </view>
+    </view>
+    <view class='depict'>资料描述</view>
+    <text class='contentText'>
+    The history of the transmission of ancient Roman texts prior to invention of the printing press is reconstructed from evidence both internal and external to the text themselves. Internal evidence is used to reconstruct the relationship of the surviving manuscripts of a Roman text to one another, as represented in a modern stemma codicum: a diagram depicting the genealogical relationship of surviving manuscripts and those the stemma’s editor believes existed at one time. Stemmata are scholars’ only road maps to textual connections based on internal evidence, but they may paint a distorted picture of reality because they diagram the relationships of only those manuscripts known or inferred today. If surviving copies are few, the stemma perforce brings into proximity manuscripts that were widely separated in time and place of origin. Conversely, the stemma can also bestow a semblance of separation on manuscripts written within a few months of one another or even in the same room.
+    </text>
+  </view>
+</view>

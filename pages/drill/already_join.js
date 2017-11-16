@@ -32,9 +32,15 @@ Page({
         var totalTime2 = Math.floor(totalTime1 / 3600)
         var todayTime1 = res.data.product.userProduct.todayTime
         var todayTime2 = Math.floor(todayTime1 / 60)
+        var product = res.data.product
+        var examList = []
+        if (product.category == 4) {
+          examList = res.data.examList
+        }
         that.setData({
           lastType:res.data.product.userProduct.lastType,
-          product: res.data.product,
+          product: product,
+          examList: examList,
           totalTime: totalTime2,
           todayTime: todayTime2,
           n: res.data.product.userProduct.percentage.toFixed(1)
@@ -71,8 +77,19 @@ Page({
   },
  //进入单词页
   bindReciteTap:function(e){
-    wx.navigateTo({
-      url: 'words/list?id=' + this.data.product.id + '&type=' + e.currentTarget.dataset.type+'&time=0&category=' + this.data.product.category,
-    })
+    if (this.data.product.category==4){
+      var type = e.currentTarget.dataset.type
+      if (type == 1){
+        type = this.data.examList[0].id
+      }
+      wx.navigateTo({
+        url: 'morningCall/exam?id=' + type,
+      })
+    }
+    if ((this.data.product.category == 2) || (this.data.product.category == 3)){
+      wx.navigateTo({
+        url: 'words/list?id=' + this.data.product.id + '&type=' + e.currentTarget.dataset.type + '&time=0&category=' + this.data.product.category,
+      })
+    }
   }
 })

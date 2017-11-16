@@ -1,0 +1,96 @@
+.page{
+  width:100%;
+  background: #fff;
+  padding-bottom: 96rpx;
+}
+.page_all {
+  height: 100%;
+  background: #fff;
+}
+.top{
+  background: #fff;
+  border-bottom: 20rpx solid #f8f8f8;
+}
+.particulars_box{
+  width:750rpx;
+  height:360rpx;
+  position: relative;
+}
+.particulars_box image{
+  width:750rpx;
+  height:360rpx;
+}
+.particulars_title{
+  width:650rpx;
+  position: absolute;
+  top:230rpx;
+  color: #fff;
+  font-size: 22rpx;
+  padding: 0rpx 50rpx;
+}
+.particulars_title view{
+   font-size: 36rpx;
+   margin-bottom: 20rpx;
+}
+.explain_title{
+  margin: 0 30rpx;
+  font-size: 26rpx;
+  height: 87rpx;
+  line-height: 87rpx;
+  border-bottom: 2rpx solid #f8f8f8;
+}
+.explain_main{
+  margin: 10rpx 30rpx 30rpx 30rpx;
+  color: #888888;
+  font-size: 26rpx;
+  width: 690rpx;
+}
+.bottom{
+  background: #fff;
+}
+.bottom-title{
+  margin: 0 30rpx;
+  font-size: 26rpx;
+  height: 87rpx;
+  line-height: 87rpx;
+  border-bottom: 2rpx solid #f8f8f8;
+}
+.bottom_line_item{
+  margin: 0 30rpx;
+  font-size: 26rpx;
+  height: 87rpx;
+  line-height: 87rpx;
+  border-bottom: 2rpx solid #f8f8f8;
+  display: flex;
+  justify-content: space-between;
+}
+
+.bottom_line_item .icon-right {
+  font-size: 28rpx;
+  color:#b2b2b2;
+}
+.page__ft {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  background-color: #fff; 
+}
+.page__ft .pbtn{
+  background-color:#00cc97;
+}
+
+.page__ft .pbtn[disabled]{
+  background-color:#06ebb1;
+}
+
+.btn{
+  width:750rpx;
+  height: 96rpx;
+  font-size:28rpx;
+  line-height: 96rpx;
+  border-radius: 0;
+}
+.btn::after{
+  border-radius: 0;
+}

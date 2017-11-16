@@ -1,0 +1,72 @@
+<view class='page'>
+  <view class='container'>
+    <view class='header'>
+      <view class='gre-logo'>
+        <view class='gre'>GRE</view>
+        <view>Practice Test</view>
+      </view>
+      <view class='buttons'>
+        <view class='btn-box'>
+          <view class='btn btnFirst'>
+            <view>Exit</view>
+            <view>Section</view>
+          </view>
+          <view class='btn'>
+            <view>Review</view>
+            <view class='iconfont icon-shuqian'></view>
+          </view>
+          <view class='btn'>
+            <view>Mark</view>
+            <view class='iconfont icon-artboard61'></view>
+          </view>
+          <view class='btn'>
+            <view>Back</view>
+            <view class='iconfont icon-zuoyoufanzhuanjiantou'></view>
+          </view>
+          <view class='btn'>
+            <view>Next</view>
+            <view class='iconfont icon-zuoyoufanzhuanjiantou'></view>
+          </view>
+        </view>
+        <view class='button' bindtap='bindContinueTap'>
+          <view>Continue</view>
+          <view class='iconfont icon-youjiantou'></view>
+        </view>
+      </view>
+    </view>
+    <view class='section'>
+      <view class='sectionContent'>
+        <view>Section {{section.serialNumber}} of {{sectionNumbers}}</view>
+      </view>
+    </view>
+    <view class='content'>
+      
+      <view class='content-item1' wx:if='{{section.type==2}}'>
+        <view class='content-title marBot'>
+          <view class='title-h2'>Verbal Reasoning</view>
+          <view class='title-h4'>
+            <text>{{section.questionNumbers}} Questions</text>
+            <text>{{limitTime}} Minutes</text>
+          </view>
+        </view>
+        <view class='subheadBox'>
+          <text>For each question,indicate the best answer using the directions given. \n If a question has answer choices with <text class='subheadBold'>ovals</text>,then the correct answer consists of a single choice.If a question has answer choices with <text class='subheadBold'>square boxes</text>,then the correct answer consists of one or more answer choices.Read the directions for each question carefully.To answer questions based on a reading passage,you may need to scroll to read the entire passage. \n Click <text class='subheadBold'>Continue</text> to proceed.</text>  
+        </view>
+      </view>
+
+      <view class='content-item1' wx:if='{{section.type==1}}'>
+        <view class='content-title marBot'>
+          <view class='title-h2'>Quantitative Reasoning</view>
+          <view class='title-h4'>
+            <text>{{section.questionNumbers}} Questions</text>
+            <text>{{limitTime}} Minutes</text>
+          </view>
+        </view>
+        <view class='subheadBox'>
+          <text>For each question,indicate the best answer,using the directions given. \n If a question has answer choices with <text class='subheadBold'>ovals</text>,then the correct answer consists of a single choice.If a question has answer choices with <text class='subheadBold'>square boxes</text>,then the correct answer consists of one or more answer choices.Read the directions for each question carefully.To answer questions based on a data presentation,you may need to scroll to see the entire presentation. \n All numbers used are real numbers. \n All figures are assumed to lie in a plane unless otherwise indicated. \n Geometric figures,such as lines,circles,triangles,and quadrilaterals,<text class='subheadBold'>are not necessarily</text> drawn to scale.That is,you should <text class='subheadBold'>not</text> assume that quantities such as lengths and angle measures are as they appear in a figure.You should assume, however, that lines shown as straiht are actually straiht, points on a line are in the order shown,and more generally, all geometric objects are in the relative positions shown. For questions with geometric figures,you should base your answers on geometric reasoning,not on estimating or comparing quantities by sight or by measurement. \n Coordinate systems,such as xy-planes and number lines,<text class='subheadBold'>are</text> drawn to scale;therefore you can read, estimate, or compare quantities in such figures by sight or by measurement. \n Graphical data presentations,such as bar graphs,circle graphs,and line graphs,<text class='subheadBold'>are</text> drawn to scale;therefore you can read, estimate, or compare data values by sight or by measurement. \n Click <text class='subheadBold'>Continue</text> to go on.</text>  
+        </view>
+      </view>
+
+    </view>
+  </view>
+</view>

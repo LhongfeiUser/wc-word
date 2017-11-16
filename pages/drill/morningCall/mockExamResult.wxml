@@ -3,7 +3,7 @@
   <view class='header'>
     <view class='header-top'>
       <view class='title'>Verbal Reasoning</view>
-      <view class='iconfont icon-qianjin'></view>
+      <view class='iconfont icon-next'></view>
     </view>
     <view class='explain'>
       Within each category below, questions are displayed in order of difficulty from 1 (easy) to 5 (hard).
@@ -14,19 +14,130 @@
       <view class='passageTitle'>Reading Comprehension - Longer Passage</view>
       <view class='content'>
         <view class='content-left'>
-          <view class='choice'></view>
+          <view class='choice'>1. Multiple-choice – Select One </view>
           <view class='particulars'>
-            <view></view>
-            <view></view>
-            <icon type="success"></icon>
+          <view class='star'>
+            <view class='iconfont icon-difficulty_fills'></view>
+            <view class='iconfont icon-difficulty_fills'></view>
+            <view class='iconfont icon-difficulty_fills'></view>
+            <view class='iconfont icon-difficulty_fills'></view>
+            <view class='iconfont icon-difficulty_fills'></view>
+          </view>
+            <view class='answerTime'>
+              <view class='iconfont icon-spenttime'></view>
+              <view>00:30</view>
+            </view>
+            <view class='iconfont icon-right1'></view>
+          </view>
+        </view>
+        <view class='content-right' bindtap='bindExplainTap'>
+          <view class='iconfont icon-play'></view>
+          <view class='vio-explain'>视频讲解</view>
+        </view>
+      </view>
+      <view class='content'>
+        <view class='content-left'>
+          <view class='choice'>1. Multiple-choice – Select One </view>
+          <view class='particulars'>
+          <view class='star'>
+            <view class='iconfont icon-difficulty_fills'></view>
+            <view class='iconfont icon-difficulty_fills'></view>
+            <view class='iconfont icon-difficulty_fills'></view>
+          </view>
+            <view class='answerTime'>
+              <view class='iconfont icon-spenttime'></view>
+              <view>00:30</view>
+            </view>
+            <view class='iconfont icon-right1'></view>
           </view>
         </view>
         <view class='content-right'>
-          <view class='iconfont icon-bofang'></view>
-          <view>视频讲解</view>
+          <view class='iconfont icon-play'></view>
+          <view class='vio-explain'>视频讲解</view>
+        </view>
+      </view>
+      <view class='content'>
+        <view class='content-left'>
+          <view class='choice'>1. Multiple-choice – Select One </view>
+          <view class='particulars'>
+          <view class='star'>
+            <view class='iconfont icon-difficulty_fills'></view>
+            <view class='iconfont icon-difficulty_fills'></view>
+          </view>
+            <view class='answerTime'>
+              <view class='iconfont icon-spenttime'></view>
+              <view>00:30</view>
+            </view>
+            <view class='iconfont icon-right1'></view>
+          </view>
+        </view>
+        <view class='content-right'>
+          <view class='iconfont icon-play'></view>
+          <view class='vio-explain'>视频讲解</view>
         </view>
       </view>
     </view>
   </view>
-
+ <view class='passage'>
+    <view class='passageContentBox'>
+      <view class='passageTitle'>Reading Comprehension - Longer Passage</view>
+      <view class='content'>
+        <view class='content-left'>
+          <view class='choice'>1. Multiple-choice – Select One </view>
+          <view class='particulars'>
+          <view class='star'>
+            <view class='iconfont icon-difficulty_fills'></view>
+          </view>
+            <view class='answerTime'>
+              <view class='iconfont icon-spenttime'></view>
+              <view>00:30</view>
+            </view>
+            <view class='iconfont icon-right1'></view>
+          </view>
+        </view>
+        <view class='content-right'>
+          <view class='iconfont icon-play'></view>
+          <view class='vio-explain'>视频讲解</view>
+        </view>
+      </view>
+      <view class='content'>
+        <view class='content-left'>
+          <view class='choice'>1. Multiple-choice – Select One </view>
+          <view class='particulars'>
+          <view class='star'>
+            <view class='iconfont icon-difficulty_fills'></view>
+          </view>
+            <view class='answerTime'>
+              <view class='iconfont icon-spenttime'></view>
+              <view>00:30</view>
+            </view>
+            <view class='iconfont icon-right1'></view>
+          </view>
+        </view>
+        <view class='content-right'>
+          <view class='iconfont icon-play'></view>
+          <view class='vio-explain'>视频讲解</view>
+        </view>
+      </view>
+      <view class='content'>
+        <view class='content-left'>
+          <view class='choice'>1. Multiple-choice – Select One </view>
+          <view class='particulars'>
+          <view class='star'>
+            <view class='iconfont icon-difficulty_fills'></view>
+          </view>
+            <view class='answerTime'>
+              <view class='iconfont icon-spenttime'></view>
+              <view>00:30</view>
+            </view>
+            <view class='iconfont icon-right1'></view>
+          </view>
+        </view>
+        <view class='content-right'>
+          <view class='iconfont icon-play'></view>
+          <view class='vio-explain'>视频讲解</view>
+        </view>
+      </view>
+    </view>
+  </view>
 </view>
