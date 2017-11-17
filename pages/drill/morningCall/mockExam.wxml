@@ -7,7 +7,7 @@
         <view>Practice Test</view>
       </view>
       <view class='buttons'>
-        <view class='btn-box' wx:if='{{false}}'>
+        <view class='btn-box' wx:if='{{true}}'>
           <view class='btn btnFirst' bindtap='bindExitTap'>
             <view>Exit</view>
             <view>secton</view>
@@ -18,7 +18,8 @@
           </view>
           <view class='btn' bindtap='bindMarkTap'>
             <view>Mark</view>
-            <view class='iconfont icon-artboard61'></view>
+            <!--  未选中态icon-artboard61 -->
+            <view class='iconfont icon-uniF046'></view>
           </view>
           <view class='btn' bindtap='bindBackTap'>
             <view>Back</view>
@@ -26,7 +27,7 @@
           </view>
           <view class='btn' bindtap='bindNextTap'>
             <view>Next</view>
-            <view class='iconfont icon-zuoyoufanzhuanjiantou'></view>
+            <view class='iconfont icon-zuoyoufanzhuanjiantou-copy'></view>
           </view>
         </view>
 
@@ -35,7 +36,7 @@
           <view class='iconfont icon-youjiantou'></view>
         </view>
 
-        <view class='threeButton' wx:if='{{true}}'>
+        <view class='threeButton' wx:if='{{false}}'>
           <view class='btn' bindtap='bindReviewTap'>
             <view>Review</view>
             <view class='iconfont icon-shuqian'></view>
@@ -123,7 +124,7 @@
         </view>
       </view>
 
-      <view class='content-item4' wx:if='{{true}}'>
+      <view class='content-item4' wx:if='{{false}}'>
         <view class='item4-top'>
           <view class='item4-title'>
             Question 5、6 is based on this passage.
@@ -138,9 +139,96 @@
           </text>
           <view class='option4'>
             <view class='option4-contenBox'>
-              <view class='ellipse' wx:if='{{false}}'></view>
-              <view class='iconfont  option4-diamond icon-cha'></view>
+              <view>
+                <view class='ellipse' wx:if='{{true}}'></view>
+                <view class='iconfont  option4-diamond icon-cha' wx:if='{{false}}'></view>
+              </view>
               <text>It reflects a mistaken assumption about the means by which nonnative species are introduced into ecosystems.</text>
+            </view>
+          </view>
+        </view>
+      </view>
+      <!--第二套方程式类型  -->
+      <view class='content-item5' wx:if='{{false}}'>
+        <view class='item5-question'>
+          <view class='item5-title'> x ＜ y </view>
+          <view class='equationBox'>
+            <view class='equation'> Quantity A</view>
+
+            <view class='radix' wx:if='{{false}}'>
+              <view class='exponent' wx:if='{{true}}'>y</view>
+              <view>x</view>
+            </view>
+
+            <view wx:if='{{true}}'>If (a,b) is a point in the xy-plane, then the distance between (a,b) and the x-axis is |b| and the distance between (a,b) and the y-axis is |a|.</view>
+          </view>
+          <view class='equationBox'>
+            <view class='equation'> Quantity B</view>
+
+            <view class='radix' wx:if='{{false}}'>0</view>
+            <view wx:if='{{true}}'>If (a,b) is a point in the xy-plane, then the distance between (a,b) and the x-axis is |b| and the distance between (a,b) and the y-axis is |a|.</view>
+          </view>
+        </view>
+        <view class='option5'>
+          <view class='option5-contenBox'>
+            <view>
+              <view class='item5-ellipse'></view>
+            </view>
+            <text>Quantity A is greater.</text>
+          </view>
+          <view class='option5-contenBox'>
+            <view>
+              <view class='item5-ellipse'></view>
+            </view>
+            <text>Quantity A is greater.</text>
+          </view>
+          <view class='option5-contenBox'>
+            <view>
+              <view class='item5-ellipse'></view>
+            </view>
+            <text>Quantity A is greater.</text>
+          </view>
+          <view class='option5-contenBox'>
+            <view>
+              <view class='item5-ellipse'></view>
+            </view>
+            <text>Quantity A is greater.</text>
+          </view>
+        </view>
+        <view class='hint'>Click on your choice.</view>
+      </view>
+
+      <view class='content-item6' wx:if='{{true}}'>
+        <view class='item6-box'>
+          <view class='item6-title'>If (7,3) is the center of the circle, then the radius of the circle could be equal to which of the following?</view>
+          <input wx:if='{{false}}'></input>
+          <view class='item6-pic'wx:if='{{true}}'>
+            <image src='http://gwc.weichenedu.cn/file/question_content_1498460603160_z4rprN'></image>
+          </view>
+          <view class='option6' wx:if='{{true}}'>
+            <view class='option6-contenBox'>
+              <view>
+                <view class='item6-ellipse'></view>
+              </view>
+              <text>1</text>
+            </view>
+            <view class='option6-contenBox'>
+              <view>
+                <view class='item6-ellipse'></view>
+              </view>
+              <text>1</text>
+            </view>
+            <view class='option6-contenBox'>
+              <view>
+                <view class='item6-ellipse'></view>
+              </view>
+              <text>1</text>
+            </view>
+            <view class='option6-contenBox'>
+              <view>
+                <view class='item6-ellipse'></view>
+              </view>
+              <text>1</text>
             </view>
           </view>
         </view>

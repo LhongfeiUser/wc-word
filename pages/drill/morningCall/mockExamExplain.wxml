@@ -2,12 +2,12 @@
 <view class='page'>
   <view class='header'>
     <view class='header-left'>
-      <view class='iconfont'>1</view>
+      <view class='iconfont icon-shouye'></view>
       <view>首页</view>
     </view>
     <view class='header-right'>
       <view class='nickName'>火舞弟弟</view>
-      <view class='iconfont'>2</view>
+      <view class='iconfont icon-signout'></view>
       <view>退出</view>
     </view>
   </view>
@@ -39,5 +39,15 @@
     <text class='contentText'>
     The history of the transmission of ancient Roman texts prior to invention of the printing press is reconstructed from evidence both internal and external to the text themselves. Internal evidence is used to reconstruct the relationship of the surviving manuscripts of a Roman text to one another, as represented in a modern stemma codicum: a diagram depicting the genealogical relationship of surviving manuscripts and those the stemma’s editor believes existed at one time. Stemmata are scholars’ only road maps to textual connections based on internal evidence, but they may paint a distorted picture of reality because they diagram the relationships of only those manuscripts known or inferred today. If surviving copies are few, the stemma perforce brings into proximity manuscripts that were widely separated in time and place of origin. Conversely, the stemma can also bestow a semblance of separation on manuscripts written within a few months of one another or even in the same room.
     </text>
+    <view class='question-box'>
+       <text class='question'>The passage is primarily concerned with which of the following?</text>
+       <view class='options'>
+          <view class='options-item'>
+            <view class='iconfont icon-right1'></view>
+            <view class='circle'></view>
+            <text class='choice'>1.Tracing certain changes in the methods used to study the transmission of ancient Roman texts.</text>
+          </view>
+       </view>
+    </view>
   </view>
 </view>

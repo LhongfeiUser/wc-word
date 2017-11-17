@@ -14,7 +14,7 @@
         <text>查单词</text>
       </view>
       <view class='goal_bottom'>
-        <view class='goal_bottom_view goal'>
+        <view class='goal_bottom_view goal' bindtap='bindReviewTap'>
           <view>目标分数</view>
           <text>{{user.expectedMark}}</text>
         </view>

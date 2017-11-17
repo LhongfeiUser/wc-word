@@ -1,2 +1,39 @@
-<!--pages/drill/morningCall/finish_section.wxml-->
-<text>pages/drill/morningCall/finish_section.wxml</text>
+<view class='page'>
+  <view class='container'>
+    <view class='header'>
+      <view class='gre-logo'>
+        <view class='gre'>GRE</view>
+        <view>Practice Test</view>
+      </view>
+      <view class='buttons'>
+        <view class='btn-box'>
+          <view class='btn' bindtap='bindReviewTap'>
+            <view>Review</view>
+            <view class='iconfont icon-shuqian'></view>
+          </view>
+          <view class='btn btnMain' bindtap='bindReturnTap'>
+            <view>Return</view>
+            <view class='iconfont icon-zuoyoufanzhuanjiantou'></view>
+          </view>
+          <view class='btn btnBig btnMain' bindtap='bindContinueTap'>
+            <view>Continue</view>
+            <view class='iconfont icon-zuoyoufanzhuanjiantou-copy'></view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class='section'>
+      <view class='sectionContent'>
+        <view>Section {{sSerialNumber}} of {{sectionNumbers}}</view>
+        <view>{{lTime}}</view>
+      </view>
+    </view>
+    <view class='content'>
+      <view class='content-item1'>
+        <view class='subheadBox'>
+          <text>You have seen all of the questions in this section.You have time remaining to Review.As long as there is time remaining,you can check your work.Once you leave this section, you WILL NOT be able to return to it. \n Click <text class='subheadBold'>Return</text> to go back to the last question in this section. \n Click <text class='subheadBold'>Review</text> to go back to the Review screen. \n Click <text class='subheadBold'>Continue</text> to go on to the next section of the test.</text>  
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

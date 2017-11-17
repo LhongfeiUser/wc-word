@@ -7,7 +7,7 @@
       </view>
       <view class='buttons'>
         <view class='btn-box'>
-          <view class='btn btnFirst'>
+          <view class='btn btnBig btnWaring' bindtap='bindExitTap'>
             <view>Exit</view>
             <view>Section</view>
           </view>
@@ -25,7 +25,7 @@
           </view>
           <view class='btn'>
             <view>Next</view>
-            <view class='iconfont icon-zuoyoufanzhuanjiantou'></view>
+            <view class='iconfont icon-zuoyoufanzhuanjiantou-copy'></view>
           </view>
         </view>
         <view class='button' bindtap='bindContinueTap'>

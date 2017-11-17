@@ -189,11 +189,16 @@
 }
 
 .option {
-  margin: 2rpx auto;
+  margin: 0 auto;
   width: 370rpx;
   border: 2rpx solid #000;
   text-align: center;
   padding: 10rpx 0;
+  border-bottom: none;
+}
+
+.option:nth-last-child(1) {
+  border-bottom: 2rpx solid #000;
 }
 
 /* content-item3 */
@@ -282,18 +287,128 @@
 }
 
 .ellipse {
-  width: 130rpx;
-  height: 30rpx;
+  width: 48rpx;
+  height: 32rpx;
   border-radius: 75%;
   border: 1rpx solid #000;
   margin-right: 30rpx;
 }
 
 .option4-diamond {
-  width: 100rpx;
+  width: 30rpx;
   border: 1rpx solid #000;
   height: 30rpx;
   font-size: 30rpx;
   line-height: 30rpx;
   margin-right: 30rpx;
+}
+
+/*content-item5  */
+
+.content-item5 {
+  border: 8rpx double #000;
+  padding: 30rpx;
+  font-size: 13pt;
+  height: 100%;
+  background: #fff;
+  color:#333;
+}
+
+.item5-question {
+  text-align: center;
+  padding:0 50rpx;
+}
+
+.equationBox {
+  margin-top: 90rpx;
+}
+
+.equation {
+  text-decoration: underline;
+  margin-bottom:20rpx;
+}
+
+.radix {
+  position: relative;
+  margin-top: 30rpx;
+}
+
+.exponent {
+  position: absolute;
+  right: 46%;
+  top: -27rpx;
+}
+
+.option5{
+  margin-top: 60rpx;
+}
+.option5-contenBox {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 30rpx;
+}
+.item5-ellipse {
+  width:48rpx;
+  height:32rpx;
+  border-radius: 75%;
+  border: 1rpx solid #000;
+  margin-right: 30rpx;
+}
+.hint{
+  width:340rpx;
+  font-size: 35rpx;
+  background:#d3d3d3;
+  color:#333;
+  text-align: center;
+  margin: 0 auto;
+  margin-top:300rpx;
+  padding:20rpx;
+}
+
+/*content-item6  */
+
+.content-item6 {
+  border: 8rpx double #000;
+  padding: 30rpx;
+  font-size: 13pt;
+  height: 100%;
+  background: #fff;
+  color:#333;
+  /*如果页面有input 加padding-bottom,如果没有，不加  */
+   /* padding-bottom:528rpx;    */
+}
+.option6{
+  margin-top: 60rpx;
+}
+.option6-contenBox {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 30rpx;
+}
+.item6-ellipse {
+  width:48rpx;
+  height:32rpx;
+  border-radius: 75%;
+  border: 1rpx solid #000;
+  margin-right: 30rpx;
+}
+
+.item6-title{
+  padding:0 0 90rpx;
+  text-align: justify;
+}
+.item6-pic{
+  width:100%;
+}
+.item6-pic image{
+  width:100%;
+}
+.item6-box{
+  padding:90rpx;
+}
+
+.item6-box input{
+  width:200rpx;
+  height:30rpx;
+  border: 1rpx solid #666;
 }

@@ -83,15 +83,15 @@
   justify-content: center;
 }
 
-.btn.btnFirst {
+.btn.btnBig {
   width: 150rpx;
-  display: block;
-  text-align: center;
-  background: #75586d;
-  border-radius: 10rpx;
-  border: 4rpx solid #fff;
 }
-
+.btn.btnWaring{
+  background: #75586d;
+}
+.btn.btnMain {
+  background: #4263b0;
+}
 .btn {
   width: 110rpx;
   display: block;
@@ -100,16 +100,6 @@
   border: 4rpx solid #fff;
   margin: 20rpx 10rpx 20rpx 0;
   padding: 5rpx 0;
-}
-
-.threeButton {
-  display: flex;
-  justify-content: center;
-}
-
-.continue-btn {
-  background: #4263b0;
-  width: 150rpx;
 }
 
 .content {
@@ -159,7 +149,7 @@
 }
 
 .content-item1 text {
-  line-height: 45rpx;
+  line-height: 150%;
   color: #333;
 }
 

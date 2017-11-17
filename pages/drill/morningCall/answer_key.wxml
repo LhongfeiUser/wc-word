@@ -1,2 +1,34 @@
-<!--pages/drill/morningCall/answer_key.wxml-->
-<text>pages/drill/morningCall/answer_key.wxml</text>
+<view class='page'>
+  <view class='container'>
+    <view class='header'>
+      <view class='gre-logo'>
+        <view class='gre'>GRE</view>
+        <view>Practice Test</view>
+      </view>
+      <view class='buttons'>
+        <view class='button' bindtap='bindContinueTap'>
+          <view>Continue</view>
+          <view class='iconfont icon-youjiantou'></view>
+        </view>
+      </view>
+    </view>
+    <view class='section'>
+      <view class='sectionContent'>
+      </view>
+    </view>
+    <view class='content'>
+      
+      <view class='content-item1'>
+        <view class='content-title marBot'>
+          <view class='title-h2'>Unofficial GRE revised General Test Scores</view>
+        </view>
+        <view class='subheadBox'>
+          <text>Your unofficial Verbal Reasoning and Quantitative Reasoning scores are below. \n This software does not provide a score on the Analytical Writing measure. In order to get a sense of your perfomance on the Analytical Writing measure,you can compare your essay responses to the scored sample essay responses(with reader commentary) included with this software package.</text>  
+          <view class='subhead'>Verbal Reasoning  {{verbalScore}}</view>
+          <view class='subhead marBot'>Quantitative Reasoning  {{quantitativeScore}}</view>
+          <text>Note: <text class='subheadBold'>NS</text> indicates no scores will be reported</text> 
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,2 +1,35 @@
-<!--pages/drill/morningCall/exit_section.wxml-->
-<text>pages/drill/morningCall/exit_section.wxml</text>
+<view class='page'>
+  <view class='container'>
+    <view class='header'>
+      <view class='gre-logo'>
+        <view class='gre'>GRE</view>
+        <view>Practice Test</view>
+      </view>
+      <view class='buttons'>
+        <view class='btn-box'>
+          <view class='btn btnMain' bindtap='bindReturnTap'>
+            <view>Return</view>
+            <view class='iconfont icon-zuoyoufanzhuanjiantou'></view>
+          </view>
+          <view class='btn btnBig btnWaring' bindtap='bindExitTap'>
+            <view>Exit</view>
+            <view>Section</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class='section'>
+      <view class='sectionContent'>
+        <view>{{sectionContent}}</view>
+        <view>{{lTime}}</view>
+      </view>
+    </view>
+    <view class='content'>
+      <view class='content-item1'>
+        <view class='subheadBox'>
+          <text>If you click <text class='subheadBold'>Exit Section</text>,you WILL NOT be able to return to this section of the test.</text>  
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

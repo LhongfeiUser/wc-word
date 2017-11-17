@@ -17,7 +17,7 @@
     <view class='bottom'>
       <view class='bottom-title'>答题记录</view>
       <view class='bottom_main'>
-        <view class="bottom_line_item"  wx:for="{{userExamList}}" bindtap='bindReciteTap' data-userExamId='{{item.id}}'>
+        <view class="bottom_line_item"  wx:for="{{userExamList}}" bindtap='bindReciteTap' data-id='{{item.id}}'>
           <view>{{item.createdTime}}</view>
           <view class="iconfont icon-right "></view>
         </view>

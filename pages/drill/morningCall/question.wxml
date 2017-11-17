@@ -8,17 +8,18 @@
       </view>
       <view class='buttons'>
         <view class='btn-box'>
-          <view class='btn btnFirst'>
+          <view class='btn btnBig btnWaring'  data-type='3' bindtap='bindUpdateTap'>
             <view>Exit</view>
             <view>Section</view>
           </view>
-          <view class='btn'>
+          <view class='btn'  data-type='4' bindtap='bindUpdateTap'>
             <view>Review</view>
             <view class='iconfont icon-shuqian'></view>
           </view>
-          <view class='btn'>
+          <view class='btn' bindtap='bindMarkTap'>
             <view>Mark</view>
-            <view class='iconfont icon-artboard61'></view>
+            <view class='iconfont icon-artboard61' wx:if='{{isMarked != 1}}'></view>
+            <view class='iconfont icon-uniF046' wx:if='{{isMarked == 1}}'></view>
           </view>
           <view class='btn' wx:if='{{question.serialNumber==1}}'>
             <view>Back</view>
@@ -30,7 +31,7 @@
           </view>
           <view class='btn btnMain' data-type='1' bindtap='bindUpdateTap'>
             <view>Next</view>
-            <view class='iconfont icon-zuoyoufanzhuanjiantou'></view>
+            <view class='iconfont icon-zuoyoufanzhuanjiantou-copy'></view>
           </view>
         </view>
 
@@ -62,62 +63,6 @@
           <view class='options' wx:if='{{question.type==3}}'>
             <view class='option-title' >Blank (iii)</view>
             <view class='option {{answers3[index]}}' wx:for='{{options3}}' data-blank='3' data-index='{{index}}' bindtap='bindSelect2Tap'>{{item}}</view>
-          </view>
-        </view>
-      </view>
-
-      <view class='content-item3' wx:if='{{false}}'>
-        <view class='subjectDefinition'>
-          Select one entry for the blank. Fill the blank in the way that best completes the text.
-        </view>
-        <text>
-       A new television documentary focuses on one of the prime minister’s defining contradictions, portraying her as a woman who cultivated an image of ______, but who liked to live grandly.
-       </text>
-        <view class='option-box'>
-          <view class='option3'>
-            <view class='diamondBox'>
-              <view class='iconfont icon-cha diamond'></view>
-              <view>warbling</view>
-            </view>
-            <view class='diamondBox'>
-              <view class='iconfont icon-cha diamond'></view>
-              <view>warbling</view>
-            </view>
-            <view class='diamondBox'>
-              <view class='iconfont icon-cha diamond'></view>
-              <view>warbling</view>
-            </view>
-            <view class='diamondBox'>
-              <view class='iconfont icon-cha diamond'></view>
-              <view>warbling</view>
-            </view>
-            <view class='diamondBox'>
-              <view class='iconfont icon-cha diamond'></view>
-              <view>warbling</view>
-            </view>
-          </view>
-        </view>
-      </view>
-
-      <view class='content-item4' wx:if='{{false}}'>
-        <view class='item4-top'>
-          <view class='item4-title'>
-            Question 5、6 is based on this passage.
-          </view>
-          <text>
-         An influential early view held that ecosystems contain niches for a limited number of species and that competition for resources among species—whether native or nonnative invading ones—determines ecosystems' species composition. However, factors other than competition often help explain invading species' success. For example, the American grey squirrel, often cited as a classic example of competitively superior invading species, was introduced in England in 1876 and now thrives, while the native red squirrel population has declined. Although scientists have found gray squirrels to be more efficient foragers than red ones, they also note that even before the gray squirrel’s arrival, Britain’s red squirrel populations had a periodic tendency to die out, only to be subsequently reintroduced. Furthermore, many gray squirrels are silent carriers of a disease fatal to red squirrels.
-         </text>
-        </view>
-        <view class='item4-bottom'>
-          <text>
-          It can be inferred that the author of the passage would be most likely to agree with which of the following statements about the "early view?"
-          </text>
-          <view class='option4'>
-            <view class='option4-contenBox'>
-              <view class='ellipse' wx:if='{{false}}'></view>
-              <view class='iconfont  option4-diamond icon-cha'></view>
-              <text>It reflects a mistaken assumption about the means by which nonnative species are introduced into ecosystems.</text>
-            </view>
           </view>
         </view>
       </view>

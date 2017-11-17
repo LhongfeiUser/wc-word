@@ -1,1 +1,160 @@
-/* pages/drill/morningCall/answer_key.wxss */
+/* pages/drill/morningCall/mockExam.wxss */
+
+.page {
+  width: 100%;
+  height: 100%;
+  font-family: "Helvetica Neue",
+                 Helvetica,
+                 Arial,
+                 "Hiragino Sans GB",
+                 "Hiragino Sans GB W3",
+                 "WenQuanYi Micro Hei",
+                 "Microsoft YaHei UI",
+                 "Microsoft YaHei",
+                 sans-serif;
+  font-size: 28rpx;
+  background: #fff;
+}
+
+.container {
+  width: 100%;
+}
+
+.header {
+  background-color: #333;
+  color: #fff;
+  padding: 0 10rpx 15rpx;
+}
+
+.gre-logo {
+  display: flex;
+  align-items: flex-end;
+  margin: 0;
+  padding-top: 10rpx;
+}
+
+.gre {
+  font-style: italic;
+  font-size: 36rpx;
+  margin-right: 10rpx;
+  line-height: 32rpx;
+}
+
+.buttons {
+  opacity: 0.6;
+}
+
+.button {
+  width: 150rpx;
+  display: block;
+  text-align: center;
+  background: #4263b0;
+  border-radius: 10rpx;
+  border: 4rpx solid #fff;
+  margin: auto;
+}
+
+.section {
+  height: 52rpx;
+  background-color: #f0e1e4;
+  line-height: 52rpx;
+  font-weight: 700;
+  border-bottom: 2rpx solid #b4b4b4;
+  color: #000;
+}
+
+.sectionContent {
+  margin: 0 30rpx;
+  display: flex;
+  justify-content: space-between;
+}
+
+.section::before {
+  content: " ";
+  display: block;
+  background: #882f5c;
+  height: 4rpx;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.btn-box {
+  display: flex;
+  justify-content: center;
+}
+
+
+.btn.btnBig {
+  width: 150rpx;
+}
+.btn.btnWaring{
+  background: #75586d;
+}
+.btn.btnMain {
+  background: #4263b0;
+}
+.btn {
+  width: 110rpx;
+  display: block;
+  text-align: center;
+  border-radius: 10rpx;
+  border: 4rpx solid #fff;
+  margin: 20rpx 10rpx 20rpx 0;
+  padding: 5rpx 0;
+}
+
+
+.content {
+  font-family: arial;
+  flex-grow: 1;
+  padding: 2rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+/*content-item1  */
+
+.content-item1 {
+  margin: 20rpx 30rpx;
+  height: 100%;
+  background: #fff;
+  font-size:32rpx;
+}
+
+.content-title {
+  border-bottom: 2rpx solid #000;
+  text-align: center;
+  font-weight: 700;
+}
+
+.title-h2 {
+  padding-bottom: 20rpx;
+  font-size: 44rpx;
+}
+.title-h4 {
+  padding-bottom: 20rpx;
+}
+.title-h4 text{
+  padding: 0 20rpx;
+}
+.subhead {
+  text-align: center;
+  font-weight: 700;
+  margin-top: 20rpx;
+}
+
+.subheadBold {
+  font-weight: 700;
+}
+.subheadBox{
+  text-align: justify;
+}
+
+.content-item1 text {
+  line-height: 150%;
+  color: #333;
+}
+
+.marBot {
+  margin-bottom: 20rpx;
+}

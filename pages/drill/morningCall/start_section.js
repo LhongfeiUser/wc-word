@@ -42,5 +42,10 @@ Page({
         })
       }
     })
+  },
+  bindExitTap: function () {
+    wx.redirectTo({
+      url: 'exit_section?id=' + this.data.id + '&questionId=0&sSerialNumber=' + this.data.section.serialNumber,
+    })
   }
 })

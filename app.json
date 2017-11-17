@@ -33,7 +33,6 @@
     "pages/drill/morningCall/finish_section",
     "pages/drill/morningCall/question",
     "pages/drill/morningCall/answer_key",
-    "pages/drill/morningCall/time_out",
     "pages/drill/morningCall/mockExamExplain",
 
     "pages/community/all_rankings",

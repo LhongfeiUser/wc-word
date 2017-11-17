@@ -25,6 +25,11 @@ Page({
         var lTime = that.formatTime(leftTime)
         var options = [], options2 = [], options3 = [], answers = [], answers2 = [], answers3 = []
         var type = res.data.question.type
+        if (type>3){
+          wx.navigateBack({
+            
+          })
+        }
         if ((type == 2)||(type == 3)){
           var answerList = res.data.answerList
           options = res.data.options[0]
@@ -69,6 +74,7 @@ Page({
         that.setData({
           section: res.data.section,
           question: res.data.question,
+          isMarked: res.data.isMarked,
           options: options,
           options2: options2,
           options3: options3,
@@ -91,10 +97,38 @@ Page({
               lTime: lTime,
               useTime: useTime
             });
-            timing(that);
+            if (leftTime >0){
+              timing(that);
+            } else {
+              that.timeOut()
+            }
           }
             , 1000)
         };
+      }
+    })
+  },
+  timeOut: function(){
+    var id = this.data.id
+    var that = this;
+    var ticket = wx.getStorageSync('tempTicket')
+    var answer = this.getAnswer()
+    wx.request({
+      url: 'https://weichen.bjtcsj.com/api/user_exam/' + id + '/' + this.data.questionId + '/time_out',
+      data: {
+        useTime: this.data.useTime,
+        leftTime: this.data.leftTime,
+        answer: answer
+      },
+      header: {
+        'content-type': 'application/x-www-form-urlencoded',
+        'ticket': ticket
+      },
+      method: 'POST',
+      success: function (res) {
+        wx.redirectTo({
+          url: res.data.next+'?id=' + id,
+        })
       }
     })
   },
@@ -163,36 +197,40 @@ Page({
       })
     }
   },
+  getAnswer: function(){
+    var answer = ""
+    for (var i = 0; i < this.data.answers.length; i++) {
+      if (this.data.answers[i] == 'selected') {
+        answer = answer + (i + 1) + ","
+      }
+    }
+    for (var i = 0; i < this.data.answers2.length; i++) {
+      if (this.data.answers2[i] == 'selected') {
+        answer = answer + (this.data.answers.length + i + 1) + ","
+      }
+    }
+    for (var i = 0; i < this.data.answers3.length; i++) {
+      if (this.data.answers3[i] == 'selected') {
+        answer = answer + (this.data.answers.length + this.data.answers2.length + i + 1) + ","
+      }
+    }
+    if (answer.length > 0) {
+      answer = answer.substr(0, answer.length - 1)
+    }
+    return answer
+  },
   bindUpdateTap: function (e) {
     var type = e.currentTarget.dataset.type
     var id = this.data.id
     var that = this;
     var ticket = wx.getStorageSync('tempTicket')
-    var answer = ""
-    for (var i = 0;i<this.data.answers.length;i++){
-      if (this.data.answers[i]=='selected'){
-        answer = answer + (i+1)+","
-      }
-    }
-    for (var i = 0; i < this.data.answers2.length; i++) {
-      if (this.data.answers2[i] == 'selected') {
-        answer = answer + (this.data.answers.length+i + 1) + ","
-      }
-    }
-    for (var i = 0; i < this.data.answers3.length; i++) {
-      if (this.data.answers3[i] == 'selected') {
-        answer = answer + (this.data.answers.length + this.data.answers2.length +i + 1) + ","
-      }
-    }
-    if (answer.length>0){
-      answer = answer.substr(0,answer.length-1)
-    }
+    var answer = this.getAnswer()
     wx.request({
       url: 'https://weichen.bjtcsj.com/api/user_exam/' + id + '/' + this.data.questionId,
       data: {
         useTime: this.data.useTime,
-        leftTime : this.data.leftTime,
-        answer : answer,
+        leftTime: this.data.leftTime,
+        answer: answer,
         type: type
       },
       header: {
@@ -201,8 +239,44 @@ Page({
       },
       method: 'POST',
       success: function (res) {
-        wx.redirectTo({
-          url: 'question?id=' + id + '&questionId=' + res.data.next,
+        if (type == 3) {
+          wx.redirectTo({
+            url: 'exit_section?id=' + id + '&questionId=' + that.data.questionId + '&leftTime=' + that.data.leftTime + '&qSerialNumber=' + that.data.question.serialNumber + '&qNumbers=' + that.data.section.questionNumbers + '&sSerialNumber=' + that.data.section.serialNumber,
+          })
+        } else if (type == 4) {
+          wx.redirectTo({
+            url: 'review?id=' + id + '&questionId=' + that.data.questionId + '&leftTime=' + that.data.leftTime + '&qSerialNumber=' + that.data.question.serialNumber + '&qNumbers=' + that.data.section.questionNumbers + '&sSerialNumber=' + that.data.section.serialNumber,
+          })
+        } else if (res.data.next == "finish_section") {
+          wx.redirectTo({
+            url: 'finish_section?id=' + id + '&questionId=' + that.data.questionId + '&leftTime=' + that.data.leftTime + '&sSerialNumber=' + that.data.section.serialNumber,
+          })
+        } else {
+          wx.redirectTo({
+            url: 'question?id=' + id + '&questionId=' + res.data.next,
+          })
+        }
+      }
+    })
+  },
+  bindMarkTap: function (e) {
+    var isMarked = 1 - this.data.isMarked
+    var id = this.data.id
+    var that = this;
+    var ticket = wx.getStorageSync('tempTicket')
+    wx.request({
+      url: 'https://weichen.bjtcsj.com/api/user_exam/' + id + '/' + this.data.questionId + '/mark',
+      data: {
+        isMarked: isMarked
+      },
+      header: {
+        'content-type': 'application/x-www-form-urlencoded',
+        'ticket': ticket
+      },
+      method: 'POST',
+      success: function (res) {
+        that.setData({
+          isMarked: isMarked
         })
       }
     })

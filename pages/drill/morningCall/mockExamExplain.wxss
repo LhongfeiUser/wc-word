@@ -11,6 +11,14 @@
   color:#fff;
   font-size: 26rpx;
 }
+.icon-shouye{
+  font-size: 26rpx;
+  margin-right:10rpx;
+}
+.icon-signout{
+  font-size: 26rpx;
+  margin:0 10rpx;
+}
 .header-left , .header-right{
   display: flex;
   align-items: center;
@@ -42,10 +50,41 @@
   color:#25c97c;
   margin-top:90rpx;
 }
-.contentText{
+text{
   display: block;
+  line-height:190%;
+}
+.contentText{
   font-size: 26rpx;
   text-align: justify;
   border-bottom:2rpx solid #444;
   padding-bottom: 90rpx;
+}
+.question-box{
+  margin: 90rpx 0;
+  font-size: 26rpx;
+}
+
+.options{
+  margin-top:90rpx;
+  padding-left: 30rpx;
+  color:#666;
+}
+.options-item{
+  display: flex;
+  align-items: center;
+}
+.choice{
+  color: #5dc4ac;
+}
+.icon-right1{
+  color:#25c97c;
+  margin-right:30rpx;
+}
+.circle{
+  width:70rpx;
+  height:30rpx;
+  border: 1rpx solid #666;
+  border-radius: 50%;
+  margin-right: 30rpx;
 }

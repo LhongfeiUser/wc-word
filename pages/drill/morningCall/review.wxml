@@ -1,2 +1,68 @@
 <!--pages/drill/morningCall/review.wxml-->
-<text>pages/drill/morningCall/review.wxml</text>
+<view class='page'>
+  <view class='container'>
+    <view class='header'>
+      <view class='gre-logo'>
+        <view class='gre'>GRE</view>
+        <view>Practice Test</view>
+      </view>
+      <view class='buttons'>
+        <view class='btn-box'>
+          <view class='btn btnMain' bindtap='bindReturnTap'>
+            <view>Return</view>
+            <view class='iconfont icon-zuoyoufanzhuanjiantou'></view>
+          </view>
+          <view class='btn btnBig btnMain' bindtap='bindGoToTap'>
+            <view>Go To</view>
+            <view>Question</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class='section'>
+      <view class='sectionContent'>
+        <view>{{sectionContent}}</view>
+        <view>{{lTime}}</view>
+      </view>
+    </view>
+    <view class='content'>
+      <view class='contentText'>  
+          <text>Below is the list of the questions in the current section. The question you were on is highlighted. Questions you have seen are labeled <text class='overstriking'>Answered</text>, <text class='overstriking'>Incomplete</text>; or <text class='overstriking'>Not Answered.</text> A question is labeled <text class='overstriking'>Incomplete</text> if the question requires you to select a certain number of answer choices and you have selected more or fewer than that number. Questions you have marked are indicated with a <text class='overstriking'>✔</text>. \n To return to the question you were on, click <text class='overstriking'>Return</text>. \n To go to a different question, click on that question to highlight it, then click <text class='overstriking'>Go To Question</text>.</text>
+      </view>
+      
+      <view class='review-table'>
+        <view class='review-thead'>
+          <view class='review-tr'>
+            <view class='review-td'>Question Number</view>
+            <view class='review-td'>Status</view>
+            <view class='review-td'>Marked</view>
+          </view> 
+        </view>
+        <view class='review-tbody'>
+          <view class='review-tr review-status{{questionStatusStyleList[index]}}' wx:for='{{questionIdList}}' data-index='{{index}}' wx:if='{{index*2<questionIdList.length}}' bindtap='bindSelectTap'>
+            <view class='review-td'>{{index+1}}</view>
+            <view class='review-td'>{{reviewStatus[questionStatusList[index]]}}</view>
+            <view class='review-td'>{{reviewMark[questionMarkList[index]]}}</view>
+          </view> 
+        </view>
+      </view>
+
+      <view class='review-table'>
+        <view class='review-thead'>
+          <view class='review-tr'>
+            <view class='review-td'>Question Number</view>
+            <view class='review-td'>Status</view>
+            <view class='review-td'>Marked</view>
+          </view> 
+        </view>
+        <view class='review-tbody'>
+          <view class='review-tr review-status{{questionStatusStyleList[index]}}' wx:for='{{questionIdList}}' data-index='{{index}}' wx:if='{{index*2>=questionIdList.length}}' bindtap='bindSelectTap'>
+            <view class='review-td'>{{index+1}}</view>
+            <view class='review-td'>{{reviewStatus[questionStatusList[index]]}}</view>
+            <view class='review-td'>{{reviewMark[questionMarkList[index]]}}</view>
+          </view> 
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

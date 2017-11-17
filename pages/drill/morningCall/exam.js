@@ -36,7 +36,10 @@ Page({
   },
   //进入结果页
   bindReciteTap: function (e) {
-    
+    var id = e.currentTarget.dataset.id
+    wx.navigateTo({
+      url: 'mockExamResult?id=' + id,
+    })
   },
   //开始考试
   bindStartExamTap: function (e) {

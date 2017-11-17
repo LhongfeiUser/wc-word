@@ -1,66 +1,31 @@
-// pages/drill/morningCall/answer_key.js
 Page({
-
-  /**
-   * 页面的初始数据
-   */
-  data: {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
   onLoad: function (options) {
-  
+    var sectionNumbers = wx.getStorageSync('sectionNumbers')
+    var id = options.id
+    this.setData({
+      id: id,
+    })
+    var that = this;
+    var ticket = wx.getStorageSync('tempTicket')
+    wx.request({
+      url: 'https://weichen.bjtcsj.com/api/user_exam/' + id + '/answer_key',
+      data: {},
+      header: {
+        'content-type': 'application/json',
+        'ticket': ticket
+      },
+      method: 'GET',
+      success: function (res) {
+        that.setData({
+          verbalScore: res.data.verbalScore,
+          quantitativeScore: res.data.quantitativeScore
+        })
+      }
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-  
+  bindContinueTap: function () {
+    wx.redirectTo({
+      url: 'mockExamResult?id=' + this.data.id,
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-  
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-  
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-  
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-  
-  }
 })

@@ -156,6 +156,7 @@ Page({
       })
     }
   },
+
   mockExam:function(){
     wx.navigateTo({
       url: 'drill/morningCall/mockExam',
@@ -164,6 +165,11 @@ Page({
   bindResultTap:function(){
     wx.navigateTo({
       url: 'drill/morningCall/mockExamResult',
+    })
+  },
+  bindReviewTap:function(){
+    wx.navigateTo({
+      url: 'drill/morningCall/mockExamExplain',
     })
   }
 })

@@ -1,141 +1,37 @@
 <!--pages/drill/morningCall/mockExamResult.wxml-->
 <view class='page'>
-  <view class='header'>
-    <view class='header-top'>
-      <view class='title'>Verbal Reasoning</view>
-      <view class='iconfont icon-next'></view>
-    </view>
-    <view class='explain'>
-      Within each category below, questions are displayed in order of difficulty from 1 (easy) to 5 (hard).
-    </view>
-  </view>
-  <view class='passage'>
-    <view class='passageContentBox'>
-      <view class='passageTitle'>Reading Comprehension - Longer Passage</view>
-      <view class='content'>
-        <view class='content-left'>
-          <view class='choice'>1. Multiple-choice – Select One </view>
-          <view class='particulars'>
-          <view class='star'>
-            <view class='iconfont icon-difficulty_fills'></view>
-            <view class='iconfont icon-difficulty_fills'></view>
-            <view class='iconfont icon-difficulty_fills'></view>
-            <view class='iconfont icon-difficulty_fills'></view>
-            <view class='iconfont icon-difficulty_fills'></view>
-          </view>
-            <view class='answerTime'>
-              <view class='iconfont icon-spenttime'></view>
-              <view>00:30</view>
-            </view>
-            <view class='iconfont icon-right1'></view>
-          </view>
-        </view>
-        <view class='content-right' bindtap='bindExplainTap'>
-          <view class='iconfont icon-play'></view>
-          <view class='vio-explain'>视频讲解</view>
-        </view>
+  <view wx:for='{{sectionList}}' wx:if='{{sectionIndex==current}}' wx:for-index='sectionIndex' wx:for-item='section'>
+    <view class='header'>
+      <view class='header-top'>
+        <view class='iconfont icon-back1' wx:if='{{sectionIndex>0}}' bindtap='bindBackTap'></view>
+        <view class='title'>{{sectionTitle[section.type-1]}}</view>
+        <view class='iconfont icon-next' wx:if='{{sectionIndex+1<sectionList.length}}' bindtap='bindNextTap'></view>
       </view>
-      <view class='content'>
-        <view class='content-left'>
-          <view class='choice'>1. Multiple-choice – Select One </view>
-          <view class='particulars'>
-          <view class='star'>
-            <view class='iconfont icon-difficulty_fills'></view>
-            <view class='iconfont icon-difficulty_fills'></view>
-            <view class='iconfont icon-difficulty_fills'></view>
-          </view>
-            <view class='answerTime'>
-              <view class='iconfont icon-spenttime'></view>
-              <view>00:30</view>
-            </view>
-            <view class='iconfont icon-right1'></view>
-          </view>
-        </view>
-        <view class='content-right'>
-          <view class='iconfont icon-play'></view>
-          <view class='vio-explain'>视频讲解</view>
-        </view>
-      </view>
-      <view class='content'>
-        <view class='content-left'>
-          <view class='choice'>1. Multiple-choice – Select One </view>
-          <view class='particulars'>
-          <view class='star'>
-            <view class='iconfont icon-difficulty_fills'></view>
-            <view class='iconfont icon-difficulty_fills'></view>
-          </view>
-            <view class='answerTime'>
-              <view class='iconfont icon-spenttime'></view>
-              <view>00:30</view>
-            </view>
-            <view class='iconfont icon-right1'></view>
-          </view>
-        </view>
-        <view class='content-right'>
-          <view class='iconfont icon-play'></view>
-          <view class='vio-explain'>视频讲解</view>
-        </view>
+      <view class='explain'>
+        Within each category below, questions are displayed in order of difficulty from 1 (easy) to 5 (hard).
       </view>
     </view>
-  </view>
- <view class='passage'>
-    <view class='passageContentBox'>
-      <view class='passageTitle'>Reading Comprehension - Longer Passage</view>
-      <view class='content'>
-        <view class='content-left'>
-          <view class='choice'>1. Multiple-choice – Select One </view>
-          <view class='particulars'>
-          <view class='star'>
-            <view class='iconfont icon-difficulty_fills'></view>
-          </view>
-            <view class='answerTime'>
-              <view class='iconfont icon-spenttime'></view>
-              <view>00:30</view>
+    <view class='passage' wx:for='{{questionCategory[section.type-1]}}' wx:if='{{questionMap[section.id][categoryIndex].length>0}}' wx:for-index='categoryIndex' wx:for-item='category'>
+      <view class='passageContentBox'>
+        <view class='passageTitle'>{{category}}</view>
+        <view class='content'  wx:for='{{questionMap[section.id][categoryIndex]}}'  wx:for-index='questionIndex' wx:for-item='question'>
+          <view class='content-left'>
+            <view class='choice'>{{questionIndex+1}}. {{questionType[question.type]}} </view>
+            <view class='particulars'>
+            <view class='star'>
+              <view class='iconfont icon-difficulty_fills' wx:for='{{starts}}' wx:if='item<=question.level'></view>
             </view>
-            <view class='iconfont icon-right1'></view>
-          </view>
-        </view>
-        <view class='content-right'>
-          <view class='iconfont icon-play'></view>
-          <view class='vio-explain'>视频讲解</view>
-        </view>
-      </view>
-      <view class='content'>
-        <view class='content-left'>
-          <view class='choice'>1. Multiple-choice – Select One </view>
-          <view class='particulars'>
-          <view class='star'>
-            <view class='iconfont icon-difficulty_fills'></view>
-          </view>
-            <view class='answerTime'>
-              <view class='iconfont icon-spenttime'></view>
-              <view>00:30</view>
+              <view class='answerTime'>
+                <view class='iconfont icon-spenttime'></view>
+                <view>{{useTimeMap[question.id]}}</view>
+              </view>
+              <view class='iconfont icon-wrong' wx:if='{{isRightMap[question.id]=="Wrong"}}'></view>
+              <view class='iconfont icon-right1' wx:if='{{isRightMap[question.id]=="Right"}}'></view>
             </view>
-            <view class='iconfont icon-right1'></view>
           </view>
-        </view>
-        <view class='content-right'>
-          <view class='iconfont icon-play'></view>
-          <view class='vio-explain'>视频讲解</view>
-        </view>
-      </view>
-      <view class='content'>
-        <view class='content-left'>
-          <view class='choice'>1. Multiple-choice – Select One </view>
-          <view class='particulars'>
-          <view class='star'>
-            <view class='iconfont icon-difficulty_fills'></view>
+          <view class='content-right' bindtap='bindExplainTap' data-id='{{question.id}}'>
+            <view class='vio-explain'>试题详情</view>
           </view>
-            <view class='answerTime'>
-              <view class='iconfont icon-spenttime'></view>
-              <view>00:30</view>
-            </view>
-            <view class='iconfont icon-right1'></view>
-          </view>
-        </view>
-        <view class='content-right'>
-          <view class='iconfont icon-play'></view>
-          <view class='vio-explain'>视频讲解</view>
         </view>
       </view>
     </view>

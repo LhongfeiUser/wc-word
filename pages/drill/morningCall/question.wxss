@@ -83,13 +83,11 @@
   justify-content: center;
 }
 
-.btn.btnFirst {
+.btn.btnBig {
   width: 150rpx;
-  display: block;
-  text-align: center;
+}
+.btn.btnWaring{
   background: #75586d;
-  border-radius: 10rpx;
-  border: 4rpx solid #fff;
 }
 .btn.btnMain {
   background: #4263b0;
@@ -104,15 +102,6 @@
   padding: 5rpx 0;
 }
 
-.threeButton {
-  display: flex;
-  justify-content: center;
-}
-
-.continue-btn {
-  background: #4263b0;
-  width: 150rpx;
-}
 
 .content {
   font-family: arial;
@@ -161,7 +150,7 @@
 }
 
 .content-item1 text {
-  line-height: 45rpx;
+  line-height: 150%;
   color: #333;
 }
 
@@ -184,6 +173,7 @@
 .question-content {
   display: block;
   margin-bottom: 60rpx;
+  text-align: justify;
 }
 
 .option-box {
@@ -196,7 +186,7 @@
 }
 
 .option {
-  margin: 0rpx auto;
+  margin: 0 auto;
   width: 370rpx;
   border: 2rpx solid #000;
   text-align: center;
