@@ -41,11 +41,17 @@
       <view class='bottom_main'>
         <view class="bottom_line_item" bindtap='bindReciteTap' data-type='1'>
           <view>顺序背词</view>
-          <view class="iconfont icon-right "></view>
+           <view class='iconfont icon-gou'></view>
+          <view class="iconright {{iconType[0]}} " wx:if='{{false}}'>
+            <canvas class="progress" canvas-id="canvasProgress0"></canvas>
+          </view>
         </view>
         <view class="bottom_line_item" bindtap='bindReciteTap' data-type='2'>
           <view>乱序背词[全本乱序]</view>
-          <view class="iconfont icon-right "></view>
+           <view class='iconfont icon-gou'></view>
+          <view class="iconright {{iconType[1]}}" wx:if='{{false}}'>
+            <canvas class="progress" canvas-id="canvasProgress1"></canvas>
+          </view>
         </view>
       </view>
     </view>
@@ -54,7 +60,20 @@
       <view class='bottom_main'>
         <view class="bottom_line_item"  wx:for="{{examList}}" bindtap='bindReciteTap' data-type='{{item.id}}'>
           <view>{{item.name}}</view>
-          <view class="iconfont icon-right "></view>
+          <view class='iconfont icon-gou'></view>
+          <view class="iconright {{iconType[index]}}" wx:if='{{false}}'>
+            <canvas class="progress" canvas-id="canvasProgress{{index}}"></canvas>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class='bottom' wx:if='{{product.category==5}}'>
+      <view class='bottom-title'>视频列表</view>
+      <view class='bottom_main'>
+        <view class="bottom_line_item"  wx:for="{{productVideoList}}" bindtap='bindReciteTap' data-type='{{index}}'>
+          <view>{{item.name}}</view>
+           <view class='iconfont icon-gou'></view>
+          <view class="iconfont icon-right " wx:if='{{false}}'></view>
         </view>
       </view>
     </view>

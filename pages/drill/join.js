@@ -29,9 +29,14 @@ Page({
         if (product.category==4){
           examList = res.data.examList
         }
+        var productVideoList = []
+        if (product.category == 5) {
+          productVideoList = res.data.productVideoList
+        }
         that.setData({
           product: product,
-          examList: examList
+          examList: examList,
+          productVideoList: productVideoList,
         })
        
       }

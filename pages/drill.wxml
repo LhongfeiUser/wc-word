@@ -1,7 +1,7 @@
 <view class='page'>
   <view class='main'>
     <view class='goal_box'>
-      <view class='goal_top goal' bindtap='mockExam'>
+      <view class='goal_top goal'>
         <view>总训练时长(小时)</view>
         <text>{{totalTime}}</text>
       </view>
@@ -14,11 +14,11 @@
         <text>查单词</text>
       </view>
       <view class='goal_bottom'>
-        <view class='goal_bottom_view goal' bindtap='bindReviewTap'>
+        <view class='goal_bottom_view goal'>
           <view>目标分数</view>
           <text>{{user.expectedMark}}</text>
         </view>
-        <view class='goal_bottom_view goal' bindtap='bindResultTap'>
+        <view class='goal_bottom_view goal'>
           <view>考试倒计时(天)</view>
           <text>{{examTime}}</text>
         </view>

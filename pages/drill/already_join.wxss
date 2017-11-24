@@ -131,7 +131,21 @@
   justify-content: space-between;
 }
 
-.bottom_line_item .icon-right {
+.iconright {
+  width: 28rpx;
+  height: 87rpx;
+  font-size: 28rpx;
+  color:#b2b2b2;
+  position: relative;
+}
+.progress {
+  width: 28rpx;
+  height: 28rpx;
+  position: absolute;
+  top: 29rpx;
+}
+.icon-finish:before{
+  content:"✔";
   font-size: 28rpx;
   color:#b2b2b2;
 }

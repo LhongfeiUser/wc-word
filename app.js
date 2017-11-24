@@ -21,6 +21,10 @@ App({
             success() {
               // 用户已经同意小程序使用用户信息，可以获取信息
               getUserInfo()
+            },
+            fail(){
+              var users = {"nickName":null};
+              wx.setStorageSync('user', users)
             }
           })
         }

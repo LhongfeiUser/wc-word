@@ -16,6 +16,9 @@
     "pages/drill/join",
     "pages/drill/already_join",
     "pages/drill/test_grade",
+    
+    "pages/drill/video",
+    
     "pages/drill/words/list",
     "pages/drill/words/summary",
     "pages/drill/words/cement",

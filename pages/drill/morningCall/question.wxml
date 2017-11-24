@@ -66,6 +66,48 @@
           </view>
         </view>
       </view>
+
+      <view class='content-item3' wx:if='{{question.type==6}}'>
+        <view class='subjectDefinition'>
+          Select two answer choices that, when used to complete the sentence, fit the meaning of the sentence as a whole and produce completed sentences that are alike in meaning.
+        </view>
+        <view class='question-content'>
+          <template is="wxParse" data="{{wxParseData:content.nodes}}"/>
+        </view>
+        <view class='option-box3'>
+          <view class='option3'>
+            <view class='diamondBox' wx:for='{{options}}' data-index='{{index}}' bindtap='bindSelect3Tap'>
+              <view class='iconfont {{answers[index]}} diamond'></view>
+              <view>{{item}}</view>
+            </view>
+          </view>
+        </view>
+      </view>
+
+      <view class='content-item4' wx:if='{{(question.type==4)||(question.type==5)}}'>
+        <view class='item4-top'>
+          <view class='item4-title'>
+            Question {{question.resourceQuestions}} is based on this passage.
+          </view>
+          <view class='resource-content'>
+            <template is="wxParse" data="{{wxParseData:resource.nodes}}"/>
+          </view>
+        </view>
+        <view class='item4-bottom'>
+          <view class='question-content'>
+            <template is="wxParse" data="{{wxParseData:content.nodes}}"/>
+          </view>
+          <view class='option4'>
+            <view class='option4-contenBox' wx:for='{{options}}' data-index='{{index}}' bindtap='bindSelect3Tap'>
+              <view>
+                <view class='ellipse {{answers[index]}}' wx:if='{{question.type==4}}'></view>
+                <view class='iconfont  option4-diamond {{answers[index]}}' wx:if='{{question.type==5}}'></view>
+              </view>
+              <text>{{item}}</text>
+            </view>
+          </view>
+        </view>
+      </view>
     </view>
   </view>
 </view>

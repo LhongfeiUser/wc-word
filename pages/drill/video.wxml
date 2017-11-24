@@ -1,0 +1,9 @@
+<view class='page'>
+  <view class='top'>
+    <video class='productVideo' src="{{productVideo.videoUrl}}"></video>
+    <view class='explain'>
+      <view class="explain_title">{{productVideo.name}}</view>
+      <view class="explain_main">{{productVideo.description}}</view>
+    </view>
+  </view>
+</view>

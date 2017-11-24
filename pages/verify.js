@@ -18,6 +18,21 @@ Page({
     var tempTicket = wx.getStorageSync('tempTicket');
     var user=wx.getStorageSync('user')
     var nickName=user.nickName
+    if (nickName == null){
+      wx.showModal({
+        title: "出错了",
+        content: "由于未能获取您的用户信息，程序将退出",
+        showCancel: false
+      })
+      setTimeout
+      setTimeout(function () {
+        wx.navigateBack({
+        })
+      }
+        , 3000)
+      
+      return
+    }
     var headImgUrl = user.avatarUrl
     console.log(user)
     

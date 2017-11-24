@@ -17,6 +17,7 @@
 }
 
 .container {
+  
   width: 100%;
 }
 
@@ -369,13 +370,12 @@
 
 .content-item6 {
   border: 8rpx double #000;
-  padding: 30rpx;
+  padding:90rpx 60rpx 90rpx;
   font-size: 13pt;
   height: 100%;
   background: #fff;
   color:#333;
-  /*如果页面有input 加padding-bottom,如果没有，不加  */
-   /* padding-bottom:528rpx;    */
+  min-height: 780rpx;
 }
 .option6{
   margin-top: 60rpx;
@@ -401,10 +401,7 @@
   width:100%;
 }
 .item6-pic image{
-  width:100%;
-}
-.item6-box{
-  padding:90rpx;
+  max-width:100%;
 }
 
 .item6-box input{

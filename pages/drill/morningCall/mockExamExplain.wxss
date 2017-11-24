@@ -1,90 +1,220 @@
 /* pages/drill/morningCall/mockExamExplain.wxss */
-.page{
-  width:100%;
+
+.page {
+  width: 100%;
 }
-.header{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding:30rpx 30rpx;
-  background: #000;
-  color:#fff;
-  font-size: 26rpx;
-}
-.icon-shouye{
-  font-size: 26rpx;
-  margin-right:10rpx;
-}
-.icon-signout{
-  font-size: 26rpx;
-  margin:0 10rpx;
-}
-.header-left , .header-right{
-  display: flex;
-  align-items: center;
-}
-.section{
-  padding:30rpx;
+
+.section {
+  padding: 30rpx;
   background: #fff;
   font-size: 35rpx;
-  color:#25c97c;  
+  color: #25c97c;
+  margin-top: 2rpx;
 }
-.content{
-  margin:30rpx;
+
+.content {
   background: #fff;
-  padding:30rpx 30rpx 60rpx;
+  padding: 30rpx 30rpx 60rpx;
 }
-.question-explain{
-  background:  #2db394;
+
+.question-explain {
+  background: #2db394;
   text-align: center;
-  color:#fff;
-  padding:20rpx 0;
-  font-size: 26rpx;
-}
-.question-explain view{
-  margin:10rpx 0;
-}
-.depict{
-  font-size:35rpx;
-  font-weight: 600;
-  color:#25c97c;
-  margin-top:90rpx;
-}
-text{
-  display: block;
-  line-height:190%;
-}
-.contentText{
-  font-size: 26rpx;
-  text-align: justify;
-  border-bottom:2rpx solid #444;
-  padding-bottom: 90rpx;
-}
-.question-box{
-  margin: 90rpx 0;
+  color: #fff;
+  padding: 20rpx 0;
   font-size: 26rpx;
 }
 
-.options{
-  margin-top:90rpx;
-  padding-left: 30rpx;
-  color:#666;
+.question-explain view {
+  margin: 10rpx 0;
 }
-.options-item{
+
+.depict {
+  font-size: 35rpx;
+  font-weight: 600;
+  color: #25c97c;
+  margin-top: 90rpx;
+}
+
+text {
+  display: block;
+  line-height: 190%;
+}
+
+.contentText {
+  font-size: 26rpx;
+  text-align: justify;
+  border-bottom: 2rpx solid #444;
+  padding-bottom: 90rpx;
+}
+
+.question-box {
+  margin: 90rpx 0;
+  font-size: 26rpx;
+  border-bottom: 2rpx solid #444;
+  padding-bottom: 90rpx;
+}
+
+.question-pic {
+  width: 100%;
+  margin: auto;
+}
+
+.question-pic image {
+  max-width: 100%;
+}
+
+.equation {
+  margin-top:100rpx;
+}
+
+.equation-item {
+  display: flex;
+}
+
+.equation-item_content {
+  position: relative;
+}
+
+.exponent {
+  position: absolute;
+  top: -15rpx;
+  left: 15rpx;
+}
+
+.options {
+  margin-top: 90rpx;
+  color: #666;
+}
+
+.options-item {
   display: flex;
   align-items: center;
 }
-.choice{
+
+.chright{
   color: #5dc4ac;
 }
-.icon-right1{
-  color:#25c97c;
-  margin-right:30rpx;
+
+.chwrong{
+  color: #dd2121;
 }
-.circle{
-  width:70rpx;
-  height:30rpx;
-  border: 1rpx solid #666;
+
+.icright{
+  color:#25c97c;
+  margin-right: 30rpx;
+}
+
+.icwrong{
+  color:#f43530;
+  margin-right: 30rpx;
+}
+
+.ic{
+  color:#fff;
+  margin-right: 30rpx;
+}
+
+.icright::before{
+  content:"\e645"
+}
+
+.icwrong::before{
+  content:"\e646";
+}
+
+.ic::before{
+  content:"\e646";
+}
+
+.circle {
+  width: 30rpx;
+  height: 30rpx;
+  border: 1rpx solid #000;
   border-radius: 50%;
   margin-right: 30rpx;
+}
+.circle-point{
+  width: 10rpx;
+  height: 10rpx;
+  margin: 10rpx;
+  border-radius: 50%;
+}
+.diamond {
+  width: 30rpx;
+  height: 30rpx;
+  border: 1rpx solid #000;
+  font-size: 30rpx;
+  line-height: 30rpx;
+  margin-right: 30rpx;
+}
+
+.circle-point.selected {
+  background: #000;
+}
+
+.diamond.selected::before {
+  content:"\e652";
+}
+
+
+.options-diamond {
+  border: 2rpx solid #aaa;
+  border-radius: 10rpx;
+  width: 60%;
+  margin: 20rpx auto;
+  overflow: hidden;
+}
+
+.options-diamond_item {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20rpx 0;
+  border-bottom: 2rpx solid #aaa;
+}
+
+.options-diamond_item.right{
+  background: #cbeed8;
+}
+
+.options-diamond_item.wrong{
+  background: #f8d5d6;
+}
+.options-diamond_item:nth-last-child(1) {
+  border-bottom: none;
+}
+
+.isRight1 {
+  position: absolute;
+  top: 20rpx;
+  left: 20rpx;
+}
+
+.isRight1.right{
+  color:#25c97c;
+}
+
+.isRight1.wrong{
+  color:#f43530;
+}
+
+.isRight1.right::before{
+  content:"\e645"
+}
+
+.isRight1.wrong::before{
+  content:"\e646";
+}
+
+.options-diamond_box {
+  text-align: center;
+}
+
+.options-box{
+  margin-top: 40rpx;
+}
+.options-diamond_text{
+  padding: 0 50rpx;
 }

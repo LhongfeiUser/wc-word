@@ -91,7 +91,7 @@
         </view>
       </view>
 
-      <view class='content-item3' wx:if='{{false}}'>
+      <view class='content-item3' wx:if='{{true}}'>
         <view class='subjectDefinition'>
           Select one entry for the blank. Fill the blank in the way that best completes the text.
         </view>
@@ -152,21 +152,20 @@
       <view class='content-item5' wx:if='{{false}}'>
         <view class='item5-question'>
           <view class='item5-title'> x ＜ y </view>
+
           <view class='equationBox'>
             <view class='equation'> Quantity A</view>
-
-            <view class='radix' wx:if='{{false}}'>
-              <view class='exponent' wx:if='{{true}}'>y</view>
+            <view class='radix' wx:if='{{true}}'>
+              <view class='exponent' wx:if='{{false}}'>y</view>
               <view>x</view>
             </view>
-
-            <view wx:if='{{true}}'>If (a,b) is a point in the xy-plane, then the distance between (a,b) and the x-axis is |b| and the distance between (a,b) and the y-axis is |a|.</view>
+            <view wx:if='{{false}}'>If (a,b) is a point in the xy-plane, then the distance between (a,b) and the x-axis is |b| and the distance between (a,b) and the y-axis is |a|.</view>
           </view>
+
           <view class='equationBox'>
             <view class='equation'> Quantity B</view>
-
-            <view class='radix' wx:if='{{false}}'>0</view>
-            <view wx:if='{{true}}'>If (a,b) is a point in the xy-plane, then the distance between (a,b) and the x-axis is |b| and the distance between (a,b) and the y-axis is |a|.</view>
+            <view class='radix' wx:if='{{true}}'>0</view>
+            <view wx:if='{{false}}'>If (a,b) is a point in the xy-plane, then the distance between (a,b) and the x-axis is |b| and the distance between (a,b) and the y-axis is |a|.</view>
           </view>
         </view>
         <view class='option5'>
@@ -198,14 +197,14 @@
         <view class='hint'>Click on your choice.</view>
       </view>
 
-      <view class='content-item6' wx:if='{{true}}'>
+      <view class='content-item6' wx:if='{{false}}'>
         <view class='item6-box'>
           <view class='item6-title'>If (7,3) is the center of the circle, then the radius of the circle could be equal to which of the following?</view>
-          <input wx:if='{{false}}'></input>
-          <view class='item6-pic'wx:if='{{true}}'>
-            <image src='http://gwc.weichenedu.cn/file/question_content_1498460603160_z4rprN'></image>
+          <input wx:if='{{true}}'></input>
+          <view class='item6-pic'wx:if='{{flase}}'>
+            <image src='http://gwc.weichenedu.cn/file/question_content_1498205808784_gPW4Ey'></image>
           </view>
-          <view class='option6' wx:if='{{true}}'>
+          <view class='option6' wx:if='{{false}}'>
             <view class='option6-contenBox'>
               <view>
                 <view class='item6-ellipse'></view>

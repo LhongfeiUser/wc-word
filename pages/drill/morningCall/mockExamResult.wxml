@@ -19,7 +19,7 @@
             <view class='choice'>{{questionIndex+1}}. {{questionType[question.type]}} </view>
             <view class='particulars'>
             <view class='star'>
-              <view class='iconfont icon-difficulty_fills' wx:for='{{starts}}' wx:if='item<=question.level'></view>
+              <view class='iconfont icon-difficulty_fills' wx:for='{{starts}}' wx:for-item='star' wx:if='{{star<=question.level}}'></view>{{}}
             </view>
               <view class='answerTime'>
                 <view class='iconfont icon-spenttime'></view>
@@ -30,7 +30,7 @@
             </view>
           </view>
           <view class='content-right' bindtap='bindExplainTap' data-id='{{question.id}}'>
-            <view class='vio-explain'>试题详情</view>
+            <view class='vio-explain'>试题解析</view>
           </view>
         </view>
       </view>

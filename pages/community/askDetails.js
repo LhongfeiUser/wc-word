@@ -136,18 +136,20 @@ Page({
         },
         method: 'POST',
         success: function (res) {
-          if (num == '1') {
-            discussQuestion.likeNum = discussQuestion.likeNum+1
-            discussQuestion.isLike = 1
-            that.setData({
-              discussQuestion: discussQuestion,
-            })
-          } else {
-            discussQuestion.dislikeNum = discussQuestion.dislikeNum + 1
-            discussQuestion.isLike = 2
-            that.setData({
-              discussQuestion: discussQuestion,
-            })
+          if (res.data.code==200){
+            if (num == '1') {
+              discussQuestion.likeNum = discussQuestion.likeNum + 1
+              discussQuestion.isLike = 1
+              that.setData({
+                discussQuestion: discussQuestion,
+              })
+            } else {
+              discussQuestion.dislikeNum = discussQuestion.dislikeNum + 1
+              discussQuestion.isLike = 2
+              that.setData({
+                discussQuestion: discussQuestion,
+              })
+            }
           }
         }
       })

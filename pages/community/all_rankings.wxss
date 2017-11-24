@@ -22,7 +22,6 @@
 .detailedInformation {
   position: relative;
   margin: 0 25rpx 30rpx 0;
-  border-radius: 8px;
   overflow: hidden;
 }
 

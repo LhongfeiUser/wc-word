@@ -30,7 +30,6 @@
       <view class='scheduleTop'>
         <view class='learning'>
           <view class='learningSchedule'>学习进度</view>
-          <view class='percentage'>{{percent}}%</view>
         </view>
         <view class='vocabulary'>{{totalTime}}/700小时</view>
       </view>

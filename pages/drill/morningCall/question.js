@@ -25,7 +25,7 @@ Page({
         var lTime = that.formatTime(leftTime)
         var options = [], options2 = [], options3 = [], answers = [], answers2 = [], answers3 = []
         var type = res.data.question.type
-        if (type>3){
+        if (type>6){
           wx.navigateBack({
             
           })
@@ -86,6 +86,9 @@ Page({
           useTime: 0
         })
         WxParse.wxParse('content', 'html', res.data.question.content, that);
+        if ((res.data.question.category == 1) || (res.data.question.category == 2) || (res.data.question.category == 8)){
+          WxParse.wxParse('resource', 'html', res.data.question.resourceContent, that);
+        }
         timing(that)
         function timing(that) {
           var leftTime = that.data.leftTime -1
@@ -151,14 +154,14 @@ Page({
     time = time + ss;
     return time
   },
-  bindSelect2Tap: function(e){
+  bindSelect2Tap: function (e) {
     var index = e.currentTarget.dataset.index
     var blank = e.currentTarget.dataset.blank
-    if (blank == 1){
+    if (blank == 1) {
       var options = this.data.options
       var answers = []
-      for (var i =0;i<options.length;i++){
-        if (index==i){
+      for (var i = 0; i < options.length; i++) {
+        if (index == i) {
           answers.push("selected")
         } else {
           answers.push("")
@@ -168,7 +171,7 @@ Page({
         answers: answers
       })
     }
-    if (blank == 2){
+    if (blank == 2) {
       var options2 = this.data.options2
       var answers2 = []
       for (var i = 0; i < options2.length; i++) {
@@ -182,7 +185,7 @@ Page({
         answers2: answers2
       })
     }
-    if (blank == 3){
+    if (blank == 3) {
       var options3 = this.data.options3
       var answers3 = []
       for (var i = 0; i < options3.length; i++) {
@@ -194,6 +197,33 @@ Page({
       }
       this.setData({
         answers3: answers3
+      })
+    }
+  },
+  bindSelect3Tap: function (e) {
+    var index = e.currentTarget.dataset.index
+    if ((this.data.question.type == 5) || (this.data.question.type == 6) || (this.data.question.type == 13)) {
+      var answers = this.data.answers
+      if (answers[index] == "selected") {
+        answers[index] = ""
+      } else {
+        answers[index] = "selected"
+      }
+      this.setData({
+        answers: answers
+      })
+    } else {
+      var options = this.data.options
+      var answers = []
+      for (var i = 0; i < options.length; i++) {
+        if (index == i) {
+          answers.push("selected")
+        } else {
+          answers.push("")
+        }
+      }
+      this.setData({
+        answers: answers
       })
     }
   },

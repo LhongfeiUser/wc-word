@@ -47,9 +47,18 @@
       </view>
     </view>
     <view class='bottom' wx:if='{{product.category==4}}'>
-      <view class='bottom-title'>套題列表</view>
+      <view class='bottom-title'>套题列表</view>
       <view class='bottom_main'>
         <view class="bottom_line_item"  wx:for="{{examList}}">
+          <view>{{item.name}}</view>
+          <view class="iconfont icon-right "></view>
+        </view>
+      </view>
+    </view>
+    <view class='bottom' wx:if='{{product.category==5}}'>
+      <view class='bottom-title'>视频列表</view>
+      <view class='bottom_main'>
+        <view class="bottom_line_item"  wx:for="{{productVideoList}}">
           <view>{{item.name}}</view>
           <view class="iconfont icon-right "></view>
         </view>

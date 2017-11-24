@@ -51,7 +51,20 @@ Page({
           })
       }
     })
-   
+    wx.request({
+      url: 'https://weichen.bjtcsj.com/api/products/recommend',
+      data: {},
+      header: {
+        'content-type': 'application/json',
+        'ticket': ticket
+      },
+      method: 'GET',
+      success: function (res) {
+        that.setData({
+          recommendProductList: res.data.productList
+        })
+      }
+    })
     //发送请求GET
     wx.request({
       url: 'https://weichen.bjtcsj.com/api/products/user',
@@ -70,6 +83,9 @@ Page({
           var width = rect.width * 118 /750;
           res.data.productList.forEach(function (product, index) {
             var percentage = product.userProduct.percentage.toFixed(1)
+            if (percentage == 100.0) {
+              percentage = 100
+            }
             arr.push(percentage)
             var rad = Math.PI * 2 / 100,
               startAngle = -Math.PI / 2, endAngle = -Math.PI / 2 + percentage * rad,
@@ -101,20 +117,6 @@ Page({
             n: arr
           })
         }).exec()
-      }
-    })
-    wx.request({
-      url: 'https://weichen.bjtcsj.com/api/products/recommend',
-      data: {},
-      header: {
-        'content-type': 'application/json',
-        'ticket': ticket
-      },
-      method: 'GET',
-      success: function (res) {
-        that.setData({
-          recommendProductList: res.data.productList
-        })
       }
     })          
   },
@@ -169,7 +171,7 @@ Page({
   },
   bindReviewTap:function(){
     wx.navigateTo({
-      url: 'drill/morningCall/mockExamExplain',
+      url: 'drill/morningCall/mockExamExplain?id=102494&questionId=3238',
     })
   }
 })

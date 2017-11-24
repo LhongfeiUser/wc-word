@@ -116,7 +116,6 @@ Page({
   //提交数据
 
   bindSubmitTap: function () {
-   
     var ticket = wx.getStorageSync('tempTicket');
     var title = this.data.title,
       content = this.data.content,
@@ -125,7 +124,14 @@ Page({
     if (labelIds.lastIndexOf(" ; ") == labelIds.length - 3) {
       labelIds = labelIds.substr(0, labelIds.length - 3)
     }
-    console.log(imgUrl)
+    if (title==''){
+      wx.showModal({
+        title: "错误",
+        content: "问题标题不能为空",
+        showCancel: false
+      })
+      return
+    }
     wx.request({
       url: 'https://weichen.bjtcsj.com/api/discuss/question',
       data: {

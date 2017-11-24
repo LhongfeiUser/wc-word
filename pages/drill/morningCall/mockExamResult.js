@@ -38,7 +38,7 @@ Page({
     })
   },
   bindExplainTap: function (e) {
-    wx.redirectTo({
+    wx.navigateTo({
       url: 'mockExamExplain?id=' + this.data.id+"&questionId="+e.currentTarget.dataset.id,
     })
   },

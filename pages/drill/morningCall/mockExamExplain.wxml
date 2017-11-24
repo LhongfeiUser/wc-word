@@ -1,53 +1,105 @@
-<!--pages/drill/morningCall/mockExamExplain.wxml-->
+<import src="/utils/wxParse/wxParse.wxml"/>
 <view class='page'>
-  <view class='header'>
-    <view class='header-left'>
-      <view class='iconfont icon-shouye'></view>
-      <view>首页</view>
-    </view>
-    <view class='header-right'>
-      <view class='nickName'>火舞弟弟</view>
-      <view class='iconfont icon-signout'></view>
-      <view>退出</view>
-    </view>
-  </view>
-  <view class='section'>Section 1 of 2 Question 7 of 10</view>
+  <view class='section'>Section {{section.serialNumber}} of {{exam.sectionNumbers}} Question {{question.serialNumber}} of {{section.questionNumbers}}</view>
   <view class='content'>
     <view class='question-explain'>
       <view>
         <view>答题正误</view>
-        <view>Wrong</view>
+        <view>{{answer}}</view>
       </view>
       <view>
         <view>试题种类</view>
-        <view>Reading Comprehension - Longer Passage</view>
+        <view>{{questionCategory[question.category]}}</view>
       </view>
       <view>
         <view>试题类型</view>
-        <view>Multiple-choice – Select One</view>
+        <view>{{questionType[question.type]}}</view>
       </view>
       <view>
         <view>试题难度</view>
-        <view>5</view>
+        <view>{{question.level}}</view>
       </view>
       <view>
         <view>答题用时</view>
-        <view>00:00</view>
+        <view>{{useTime}}</view>
       </view>
     </view>
-    <view class='depict'>资料描述</view>
-    <text class='contentText'>
-    The history of the transmission of ancient Roman texts prior to invention of the printing press is reconstructed from evidence both internal and external to the text themselves. Internal evidence is used to reconstruct the relationship of the surviving manuscripts of a Roman text to one another, as represented in a modern stemma codicum: a diagram depicting the genealogical relationship of surviving manuscripts and those the stemma’s editor believes existed at one time. Stemmata are scholars’ only road maps to textual connections based on internal evidence, but they may paint a distorted picture of reality because they diagram the relationships of only those manuscripts known or inferred today. If surviving copies are few, the stemma perforce brings into proximity manuscripts that were widely separated in time and place of origin. Conversely, the stemma can also bestow a semblance of separation on manuscripts written within a few months of one another or even in the same room.
-    </text>
+    <view class='depictBox' wx:if='{{(question.category==8) || (question.category==1) || (question.category==2)}}'>
+      <view class='depict'>资料描述</view>
+      <view class='contentText'>
+        <template is="wxParse" data="{{wxParseData:resource.nodes}}"/>
+      </view>
+    </view>
+
     <view class='question-box'>
-       <text class='question'>The passage is primarily concerned with which of the following?</text>
-       <view class='options'>
-          <view class='options-item'>
-            <view class='iconfont icon-right1'></view>
-            <view class='circle'></view>
-            <text class='choice'>1.Tracing certain changes in the methods used to study the transmission of ancient Roman texts.</text>
+      <view>
+        <view class='question'>
+          <template is="wxParse" data="{{wxParseData:content.nodes}}"/>
+        </view>
+        <view class='question-pic' wx:if='{{false}}'>
+          <image src='http://gwc.weichenedu.cn/file/question_content_1498205808784_gPW4Ey'></image>
+        </view>
+        <view class='equation' wx:if='{{false}}'>
+           <view class='equation-item'>
+             <view>Quantity A:</view>
+             <view class='equation-item_content'>
+               <view>x</view>
+               <view class='exponent'>y</view>
+             </view>
+           </view>
+           <view class='equation-item'>
+             <view>Quantity B:</view>
+             <view class='equation-item_content'>0</view>
+           </view>
+        </view>
+      </view>
+      
+      <view class='options' wx:if='{{(question.type>3)&&(question.type<14)}}'>
+        <view class='options-item' wx:for='{{options}}'>
+          <view class='iconfont ic{{isRight[index]}}'></view>
+          <view>
+            <view class='circle' wx:if='{{(question.type==4)||(question.type==11)||(question.type==12)}}'><view class='circle-point {{isSelected[index]}}'></view></view>
+            <view class='iconfont diamond  {{isSelected[index]}}' wx:if='{{(question.type==5)||(question.type==6)||(question.type==13)}}'></view>
           </view>
-       </view>
+          <text class='ch{{isRight[index]}}'>{{index+1}}.{{item}}</text>
+        </view>
+      </view>
+      <view class='options-diamond_box' wx:if='{{question.type<4}}'>
+        <view class='options-box'>
+          <view wx:if='{{question.type>1}}'>Blank (i)</view>
+          <view class='options-diamond'>
+            <view class='options-diamond_item {{isRight[index]}}' wx:for='{{options}}'>
+              <view class='iconfont isRight1 {{isRight[index]}}'></view>
+              <view class='options-diamond_text'>{{item}}</view>
+            </view>
+          </view>
+        </view>
+        <view class='options-box'  wx:if='{{question.type>1}}'>
+          <view>Blank (ii)</view>
+          <view class='options-diamond'>
+            <view class='options-diamond_item {{isRight[index+options.length]}}' wx:for='{{options2}}'>
+              <view class='iconfont isRight1 {{isRight[index+options.length]}}'></view>
+              <view class='options-diamond_text'>{{item}}</view>
+            </view>
+          </view>
+        </view>
+        <view class='options-box' wx:if='{{question.type==3}}'>
+          <view>Blank (iii)</view>
+          <view class='options-diamond'>
+            <view class='options-diamond_item {{isRight[index+options.length+options2.length]}}' wx:for='{{options3}}'>
+              <view class='iconfont isRight1 {{isRight[index+options.length+options2.length]}}'></view>
+              <view class='options-diamond_text'>{{item}}</view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <view class='solutionBox'>
+      <view class='depict'>题目解析</view>
+      <view>
+        <template is="wxParse" data="{{wxParseData:solution.nodes}}"/>
+      </view>
     </view>
   </view>
 </view>
